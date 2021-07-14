@@ -15,9 +15,9 @@ public class TestCalculatePoints
         Vector3 b = new Vector3(2, 1, 0);
         
         // ASSERT
-        Vector3 result = CalculatePoints.GetLergePoint(a, b);
-        Assert.GreaterOrEqual(result.x, a.x);
-        Assert.GreaterOrEqual(result.y, a.y);
-        Assert.GreaterOrEqual(result.z, a.z);
+        var result = CalculatePoints.GetLergePoint(a, b);
+        Assert.GreaterOrEqual(result.max.x, result.min.x);
+        Assert.GreaterOrEqual(result.max.y, result.min.y);
+        Assert.GreaterOrEqual(result.max.z, result.min.z);
     }
 }

@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public static class CalculatePoints
 {
-    public static Vector3 GetLergePoint(Vector3 a, Vector3 b)
+    public static (Vector3 min, Vector3 max) GetLergePoint(Vector3 a, Vector3 b)
     {
-        return a.magnitude > b.magnitude ? a : b;
+        return a.magnitude > b.magnitude ? (b, a) : (a, b);
     }
+    
+    
 }

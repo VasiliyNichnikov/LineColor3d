@@ -14,9 +14,9 @@ public class TestControlMesh
         Vector3[] verticles =
         {
             new Vector3(0, 0, 0),
-            new Vector3(0, 1, 0),
+            new Vector3(0, 0, 1),
             new Vector3(1, 0, 0),
-            new Vector3(1, 1, 0)
+            new Vector3(1, 0, 1)
         };
 
         int[] triangles =
@@ -35,8 +35,8 @@ public class TestControlMesh
     public void TestGetVerticlesUpLeftSide()
     {
         //ACT
-        Vector3[] selectedVerticles = ControlMesh.GetVerticlesSelectedSide(_square1, Side.UpLeft);
-        Vector3[] resultVerticles = {new Vector3(0, 1, 0)};
+        Vector3[] selectedVerticles = ControlMesh.GetVerticesSelectedSide(_square1, Side.UpLeft);
+        Vector3[] resultVerticles = {new Vector3(0, 0, 1)};
         // ASSERT
         Assert.AreEqual(selectedVerticles, resultVerticles);
     }
@@ -45,22 +45,34 @@ public class TestControlMesh
     public void TestGetVerticlesDownRightSide()
     {
         //ACT
-        Vector3[] selectedVerticles = ControlMesh.GetVerticlesSelectedSide(_square1, Side.DownRight);
+        Vector3[] selectedVerticles = ControlMesh.GetVerticesSelectedSide(_square1, Side.DownRight);
         Vector3[] resultVerticles = {new Vector3(1, 0, 0)};
         // ASSERT
-        Assert.AreEqual(selectedVerticles[0], resultVerticles[0]);
+        Assert.AreEqual(selectedVerticles, resultVerticles);
+    }
+    
+    [Test]
+    public void TestChangePositionVerticesUpLeft()
+    {
+        //ACT
+        Vector3 newPosition = new Vector3(0, 0, 2);
+        ControlMesh.ChangingPositionVertices(ref _square1, Side.UpLeft, newPosition);
+
+        //ASSERT
+        Vector3 selectedVertix = ControlMesh.GetVerticesSelectedSide(_square1, Side.UpLeft)[0];
+        Assert.AreEqual(selectedVertix, newPosition);
     }
 
     [Test]
-    public void TestOffsetPointMeshUpLeft()
+    public void TestShiftingPositionVerticesDownLeft()
     {
-        // ARRANGE
-
         //ACT
-        Vector3 newPosition = new Vector3(0, 2, 0);
-        ControlMesh.ChangingPositionVerticalsMeshSelectedSide(ref _square1, Side.UpLeft, newPosition);
-
+        Vector3 shift = new Vector3(-1, 0, 0);
+        ControlMesh.ShiftingPositionVertices(ref _square2, Side.DownLeft, shift);
+        
         //ASSERT
-        Assert.AreNotEqual(_square1.vertices, _square2.vertices);
+        Vector3 result = new Vector3(-1, 0, 0);
+        Vector3 selectedVertix = ControlMesh.GetVerticesSelectedSide(_square2, Side.DownLeft)[0];
+        Assert.AreEqual(selectedVertix, result);
     }
 }

@@ -233,8 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1d3161a2b45a7d4ebd230fdd3a06059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _p0: {x: 0, y: 0, z: 0}
-  _p1: {x: 0, y: 0, z: 20}
+  _p0: {x: 0, y: 0, z: 5}
+  _p1: {x: -23.955307, y: 0, z: 49.959126}
 --- !u!4 &466477761
 Transform:
   m_ObjectHideFlags: 0
@@ -243,7 +243,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466477759}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 16.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -348,8 +348,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7550977973472434902, guid: a80e623ef4075e04bb5faabd8ec50703,
         type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 323697993}
+    - target: {fileID: 7550977973472434902, guid: a80e623ef4075e04bb5faabd8ec50703,
+        type: 3}
+      propertyPath: _beziersFirstOrder
+      value: 
+      objectReference: {fileID: 466477760}
+    - target: {fileID: 7550977973472434902, guid: a80e623ef4075e04bb5faabd8ec50703,
+        type: 3}
       propertyPath: _activeLabelPosition
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80e623ef4075e04bb5faabd8ec50703, type: 3}

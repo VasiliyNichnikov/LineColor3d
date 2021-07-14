@@ -151,10 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _points:
-  - {x: 1, y: -0.004939437, z: 0}
-  - {x: 1.8310442, y: 1.8755116, z: 0}
+  - {x: 1, y: 0, z: -2.6210437}
+  - {x: 1.8310442, y: 0, z: 1.5508461}
   - {x: 3, y: 0, z: 0}
-  - {x: 5.024358, y: 1.8714366, z: 0}
+  - {x: 5.024358, y: 0, z: 0}
 --- !u!4 &112411051
 Transform:
   m_ObjectHideFlags: 0
@@ -179,6 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627193665}
   - component: {fileID: 627193666}
+  - component: {fileID: 627193667}
   m_Layer: 0
   m_Name: Spline
   m_TagString: Untagged
@@ -213,18 +214,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _points:
-  - {x: 9.749586, y: 0, z: 4.2028112}
-  - {x: 9.355325, y: -0.007968977, z: 6.357441}
-  - {x: -4.1502914, y: 0, z: -7.879901}
-  - {x: 4, y: 0, z: -7.666993}
-  - {x: 12.150291, y: 0, z: -7.4540854}
-  - {x: -1.9423294, y: 0, z: -12.147829}
-  - {x: 9.924035, y: 0, z: -14.784966}
-  - {x: 21.7904, y: 0, z: -17.422104}
-  - {x: 1.2692184, y: 0.15516472, z: -73.23369}
-  - {x: -6.4074802, y: 0, z: -31.280663}
+  - {x: 9.749586, y: 0, z: 97.99485}
+  - {x: 9.355325, y: -0.007968977, z: 90.85152}
+  - {x: -12.92034, y: 0, z: 49.849884}
+  - {x: -12.87414, y: 0, z: 20.225414}
+  - {x: -12.82794, y: 0, z: -9.399054}
+  - {x: -1.9423294, y: 0, z: -7.3690233}
+  - {x: 9.924035, y: 0, z: -17.591988}
+  - {x: 21.7904, y: 0, z: -27.814953}
+  - {x: 19.820244, y: 0.15516472, z: -62.714264}
+  - {x: 20.479647, y: 0, z: -87.95836}
   _modes: 01000000020000000200000001000000
   _loop: 0
+--- !u!114 &627193667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627193664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f33dffe1ca2d96a49afd1b560d86377f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 627193666}
+  frequency: 200
+  lookForward: 0
+  Road: {fileID: 5813268365888420399, guid: a80e623ef4075e04bb5faabd8ec50703, type: 3}
 --- !u!1 &1039246435
 GameObject:
   m_ObjectHideFlags: 0

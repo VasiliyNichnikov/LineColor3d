@@ -3,5 +3,5 @@
     UpLeft,
     DownLeft,
     UpRight,
-    DownRight
+    DownRight,
 }
