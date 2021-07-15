@@ -51,11 +51,11 @@ public class BezierCurveEditor : Editor
     private void ShowDirections()
     {
         Handles.color = Color.green;
-        Vector3 point = _curve.GetPoint(0f);
+        Vector3 point = _curve.GetPoint3(0f);
         Handles.DrawLine(point, point + _curve.GetDirection(0f) * _directionScale);
         for (int i = 1; i <= _lineSteps; i++)
         {
-            point = _curve.GetPoint(i / (float) _lineSteps);
+            point = _curve.GetPoint3(i / (float) _lineSteps);
             Handles.DrawLine(point, point + _curve.GetDirection(i / (float)_lineSteps * _directionScale));
         }
     }
