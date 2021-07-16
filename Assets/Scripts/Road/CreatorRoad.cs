@@ -6,18 +6,16 @@ using UnityEngine;
 public class CreatorRoad : MonoBehaviour
 {
     [SerializeField] private BezierCurve _bezier;
-    [SerializeField] [Range(0.05f, 1f)] private float _spacing = 1;
+    [SerializeField, Range(0.05f, 1f)] private float _spacing = 1;
     [SerializeField] private float _roadWidtgh = 1;
     [SerializeField] private float _tiling = 1;
+    [SerializeField] private bool _autoUpdate;
 
+    public bool AutoUpdate => _autoUpdate;
 
     public void UpdateRoad()
     {
         Vector2[] points = CalculatePoints.GetEventlySpacedPoints(_bezier, _spacing);
-        for (int i = 0; i < points.Length; i++)
-        {
-            print($"Point: {points[i]}");
-        }
         GetComponent<MeshFilter>().mesh = CreateRoadMesh(points);
 
         int textureRepeat = Mathf.RoundToInt(_tiling * points.Length * _spacing * 0.05f);

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 [CustomEditor(typeof(CreatorRoad))]
@@ -13,7 +11,10 @@ public class CreatorRoadEditor : Editor
         _creator = (CreatorRoad) target;
         base.OnInspectorGUI();
 
-        if (GUILayout.Button("Обновить дорогу"))
+        if (!_creator.AutoUpdate && GUILayout.Button("Обновить дорогу"))
+        {
+            _creator.UpdateRoad();
+        }else if (_creator.AutoUpdate)
         {
             _creator.UpdateRoad();
         }

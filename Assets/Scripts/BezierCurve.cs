@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BezierCurve : MonoBehaviour
 {
@@ -7,16 +6,16 @@ public class BezierCurve : MonoBehaviour
 
     public Vector3[] Points => _points;
     
-    public Vector3 GetPoint3(float t)
+    public Vector3 GetPoint(float t)
     {
         return transform.TransformPoint(Bezier.GetPoint(_points[0], _points[1], _points[2], _points[3], t));
     }
     
-    public Vector2 GetPoint2(float t)
+    public Vector3 GetPointNotTransformPoint(float t)
     {
-        return transform.TransformPoint(Bezier.GetPoint(_points[0], _points[1], _points[2], _points[3], t));
+        return Bezier.GetPoint(_points[0], _points[1], _points[2], _points[3], t);
     }
-    
+
     private Vector3 GetVelocity(float t)
     {
         return transform.TransformPoint(Bezier.GetFirstDerivative(_points[0], _points[1], _points[2], _points[3], t)) -

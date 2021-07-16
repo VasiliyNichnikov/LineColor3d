@@ -20,7 +20,7 @@ public class SplineDecorator : MonoBehaviour
         }
 
         float stepSize = 1f / frequency;
-        for (int p = 0, f = 0; f < frequency; f++)
+        for (int f = 0; f < frequency; f++)
         {
             Transform item = Instantiate(Road);
             // item.localScale = new Vector3(item.localScale.x, item.localScale.y, item.localScale.z);
