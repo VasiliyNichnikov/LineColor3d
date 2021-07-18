@@ -1,10 +1,12 @@
 ﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 public class CreatorRoad : MonoBehaviour
 {
+    [SerializeField] private string _pathSaveRoad;
     [SerializeField] private BezierCurve _bezier;
     [SerializeField, Range(0.05f, 1f)] private float _spacing = 1;
     [SerializeField] private float _roadWidtgh = 1;
@@ -21,7 +23,8 @@ public class CreatorRoad : MonoBehaviour
         int textureRepeat = Mathf.RoundToInt(_tiling * points.Length * _spacing * 0.05f);
         GetComponent<MeshRenderer>().sharedMaterial.mainTextureScale = new Vector2(1, textureRepeat);
     }
-
+    
+    
     private Mesh CreateRoadMesh(Vector2[] points)
     {
         Vector3[] vertices = new Vector3[points.Length * 2];
