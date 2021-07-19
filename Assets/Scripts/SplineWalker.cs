@@ -2,7 +2,7 @@
 
 public class SplineWalker : MonoBehaviour
 {
-    [SerializeField] private BezierCurve _curve;
+    [SerializeField] private Spline _spline;
     [SerializeField] private float _spacing;
     [SerializeField] private float _speed;
     private Vector2[] _points;
@@ -12,7 +12,7 @@ public class SplineWalker : MonoBehaviour
     private void Start()
     {
         _thisTransform = transform;
-        _points = CalculatePoints.GetEventlySpacedPoints(_curve, _spacing);
+        _points = CalculatePoints.GetEventlySpacedPoints(_spline, _spacing);
         _thisTransform.position = new Vector3(_points[0].x, _thisTransform.position.y, _points[0].y);
     }
 

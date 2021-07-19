@@ -5,10 +5,18 @@ using UnityEngine;
 public class Spline : MonoBehaviour, ISpline
 {
     public bool IsActiveHandles;
+    
     [SerializeField] private Vector3[] _points;
 
+    public CreatorRoad Road => GetComponent<CreatorRoad>();
+    
     public int LengthPoints => _points.Length;
 
+    public int NumberCurves
+    {
+        get => _points.Length / 3;
+    }
+    
     public Vector3 this[int index]
     {
         get
@@ -25,6 +33,16 @@ public class Spline : MonoBehaviour, ISpline
         }
     }
 
+    public Vector3[] GetPointsInCurves(int i)
+    {
+        int multiplyIByThree = i * 3;
+        return new Vector3[]
+        {
+            _points[multiplyIByThree], _points[multiplyIByThree + 1], _points[multiplyIByThree + 2],
+            _points[multiplyIByThree + 3]
+        };
+    }
+    
     public int GetNumberPoints()
     {
         return _points.Length;
@@ -40,7 +58,7 @@ public class Spline : MonoBehaviour, ISpline
         _points[_points.Length - 2] = point;
         point.x += 1;
         _points[_points.Length - 1] = point;
-        
+
         EnforceMode(_points.Length - 4);
     }
 

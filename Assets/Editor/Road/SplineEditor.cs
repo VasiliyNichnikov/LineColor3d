@@ -1,9 +1,15 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+
 [CustomEditor(typeof(Spline))]
 public class SplineEditor : Editor
 {
+    private bool RoadAutoUpdate;
+    private bool _onSelectedPoint;
+    private bool _onAddAndRemovePoint;
+    private bool _onRoadSettings;
+
     private Spline _spline;
     private Transform _handleTransform;
     private Quaternion _handleRotation;
@@ -25,29 +31,26 @@ public class SplineEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        if (_selectedIndex >= 0 && _selectedIndex < _spline.LengthPoints)
+        _onSelectedPoint = EditorGUILayout.BeginFoldoutHeaderGroup(_onSelectedPoint, "Выбранная точка.");
+        if (_onSelectedPoint && _selectedIndex >= 0 && _selectedIndex < _spline.LengthPoints)
         {
             DrawSelectedPointInspector();
+            GUILayout.Space(10);
         }
-        GUILayout.Space(10);
-
-        _spline.IsActiveHandles = EditorGUILayout.ToggleLeft("Включить отображение ручек", _spline.IsActiveHandles);
-        SaveChanges("IsActiveHandles change");
+        EditorGUILayout.EndFoldoutHeaderGroup();
         
-        if (GUILayout.Button("Добавить кривую в конец"))
+        _onAddAndRemovePoint = EditorGUILayout.BeginFoldoutHeaderGroup(_onAddAndRemovePoint, "Добавление/удаление кривых.");
+        if(_onAddAndRemovePoint)
         {
-            Undo.RecordObject(_spline, "Add Curve");
-            _spline.AddCurve();
-            EditorUtility.SetDirty(_spline);
+            _spline.IsActiveHandles = EditorGUILayout.ToggleLeft("Включить отображение ручек.", _spline.IsActiveHandles);
+            SaveChanges("IsActiveHandles change");
+            
+            ButtonAddCurve();
+            ButtonRemoveCurve();
         }
-
-        if (GUILayout.Button("Удалить кривую с конца"))
-        {
-            Undo.RecordObject(_spline, "Remove Curve");
-            _selectedIndex = 0;
-            _spline.RemoveCurve();
-            EditorUtility.SetDirty(_spline);
-        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+        
+        SettingsUpdateRoad();
     }
 
     private void SaveChanges(string nameChange)
@@ -58,7 +61,50 @@ public class SplineEditor : Editor
             EditorUtility.SetDirty(_spline);
         }
     }
-    
+
+    private void SettingsUpdateRoad()
+    {
+        _onRoadSettings = EditorGUILayout.BeginFoldoutHeaderGroup(_onRoadSettings, "Настройки дороги.");
+        if (_onRoadSettings && _spline.Road != null)
+        {
+            RoadAutoUpdate =
+                EditorGUILayout.ToggleLeft("Включить автоматическое обновление дороги", RoadAutoUpdate);
+
+            if (!RoadAutoUpdate && GUILayout.Button("Обновить дорогу"))
+            {
+                _spline.Road.UpdateRoad(_spline);
+            }
+            else if (RoadAutoUpdate)
+            {
+                _spline.Road.UpdateRoad(_spline);
+            }
+
+            GUILayout.Space(10);
+        }
+        EditorGUILayout.EndFoldoutHeaderGroup();
+    }
+
+    private void ButtonAddCurve()
+    {
+        if (GUILayout.Button("Добавить кривую в конец"))
+        {
+            Undo.RecordObject(_spline, "Add Curve");
+            _spline.AddCurve();
+            EditorUtility.SetDirty(_spline);
+        }
+    }
+
+    private void ButtonRemoveCurve()
+    {
+        if (GUILayout.Button("Удалить кривую с конца"))
+        {
+            Undo.RecordObject(_spline, "Remove Curve");
+            _selectedIndex = 0;
+            _spline.RemoveCurve();
+            EditorUtility.SetDirty(_spline);
+        }
+    }
+
     private void DrawSelectedPointInspector()
     {
         EditorGUILayout.BeginVertical("box");
@@ -91,7 +137,7 @@ public class SplineEditor : Editor
                 Handles.DrawDottedLine(p2, p3, 4.0f);
             }
 
-            Handles.DrawBezier(p0, p3, p1, p2, Color.black, null, 2f);
+            Handles.DrawBezier(p0, p3, p1, p2, Color.cyan, null, 4f);
             p0 = p3;
         }
     }

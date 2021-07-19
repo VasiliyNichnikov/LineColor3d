@@ -1,30 +1,24 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
+[RequireComponent(typeof(Spline))]
 public class CreatorRoad : MonoBehaviour
 {
-    [SerializeField] private string _pathSaveRoad;
-    [SerializeField] private BezierCurve _bezier;
     [SerializeField, Range(0.05f, 1f)] private float _spacing = 1;
     [SerializeField] private float _roadWidtgh = 1;
     [SerializeField] private float _tiling = 1;
-    [SerializeField] private bool _autoUpdate;
 
-    public bool AutoUpdate => _autoUpdate;
-
-    public void UpdateRoad()
+    public void UpdateRoad(Spline spline)
     {
-        Vector2[] points = CalculatePoints.GetEventlySpacedPoints(_bezier, _spacing);
+        Vector2[] points = CalculatePoints.GetEventlySpacedPoints(spline, _spacing);
         GetComponent<MeshFilter>().mesh = CreateRoadMesh(points);
 
         int textureRepeat = Mathf.RoundToInt(_tiling * points.Length * _spacing * 0.05f);
         GetComponent<MeshRenderer>().sharedMaterial.mainTextureScale = new Vector2(1, textureRepeat);
     }
-    
-    
+
+
     private Mesh CreateRoadMesh(Vector2[] points)
     {
         Vector3[] vertices = new Vector3[points.Length * 2];
@@ -49,8 +43,11 @@ public class CreatorRoad : MonoBehaviour
             forward.Normalize();
             Vector2 left = new Vector2(-forward.y, forward.x);
 
-            vertices[vertixIndex] = points[i] + left * _roadWidtgh * 0.5f;
-            vertices[vertixIndex + 1] = points[i] - left * _roadWidtgh * 0.5f;
+            Vector2 pointOne = points[i] + left * _roadWidtgh * 0.5f;
+            Vector2 pointTwo = points[i] - left * _roadWidtgh * 0.5f;
+
+            vertices[vertixIndex] = new Vector3(pointOne.x, 0, pointOne.y);
+            vertices[vertixIndex + 1] = new Vector3(pointTwo.x, 0, pointTwo.y);
 
             float completePercent = i / (float) (points.Length - 1);
             float v = 1 - Mathf.Abs(2 * completePercent - 1);
@@ -65,12 +62,14 @@ public class CreatorRoad : MonoBehaviour
 
                 triangles[triangleIndex + 3] = vertixIndex + 1;
                 triangles[triangleIndex + 4] = (vertixIndex + 2) % vertices.Length;
-                triangles[triangleIndex + 5] = (vertixIndex + 3) % vertices.Length;;
+                triangles[triangleIndex + 5] = (vertixIndex + 3) % vertices.Length;
+                ;
             }
 
             vertixIndex += 2;
             triangleIndex += 6;
         }
+
 
         Mesh mesh = new Mesh {vertices = vertices, triangles = triangles, uv = uvs};
         return mesh;
