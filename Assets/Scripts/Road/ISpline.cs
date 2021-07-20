@@ -1,6 +1,11 @@
-﻿public interface ISpline
+﻿using UnityEngine;
+
+public interface ISpline
 {
+    int NumberCurves { get; }
+    Vector3 this[int index] { get; }
+    int LengthPoints { get; }
     void AddCurve();
     void RemoveCurve();
-    int GetNumberPoints();
+    Vector3[] GetPointsInCurves(int i);
 }

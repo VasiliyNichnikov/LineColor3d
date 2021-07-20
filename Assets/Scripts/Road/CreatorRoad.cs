@@ -1,17 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 [RequireComponent(typeof(Spline))]
 public class CreatorRoad : MonoBehaviour
 {
+    [SerializeField] private bool _autoUpdateRoad;
     [SerializeField, Range(0.05f, 1f)] private float _spacing = 1;
     [SerializeField] private float _roadWidtgh = 1;
     [SerializeField] private float _tiling = 1;
+    [SerializeField] private Spline _spline;
 
-    public void UpdateRoad(Spline spline)
+    public bool AutoUpdateRoad => _autoUpdateRoad;
+
+    public void UpdateRoad()
     {
-        Vector2[] points = CalculatePoints.GetEventlySpacedPoints(spline, _spacing);
+        if (_spline == null)
+            throw new Exception($"Скрипт {nameof(Spline)} не найден");
+        
+        Vector3[] points = CalculatePoints.GetEventlySpacedPoints(_spline, _spacing);
         GetComponent<MeshFilter>().mesh = CreateRoadMesh(points);
 
         int textureRepeat = Mathf.RoundToInt(_tiling * points.Length * _spacing * 0.05f);
@@ -19,35 +27,32 @@ public class CreatorRoad : MonoBehaviour
     }
 
 
-    private Mesh CreateRoadMesh(Vector2[] points)
+    private Mesh CreateRoadMesh(Vector3[] points)
     {
         Vector3[] vertices = new Vector3[points.Length * 2];
         Vector2[] uvs = new Vector2[vertices.Length];
         int[] triangles = new int[2 * (points.Length - 1) * 3];
         int vertixIndex = 0;
         int triangleIndex = 0;
-
+   
         for (int i = 0; i < points.Length; i++)
         {
-            Vector2 forward = Vector2.zero;
+            Vector3 forward = Vector3.zero;
             if (i < points.Length - 1)
             {
-                forward += points[(i + 1) % points.Length] - points[i];
+                forward += points[i + 1] - points[i];
             }
 
             if (i > 0)
             {
-                forward += points[i] - points[(i - 1 + points.Length) % points.Length];
+                forward += points[i] - points[i - 1];
             }
-
             forward.Normalize();
-            Vector2 left = new Vector2(-forward.y, forward.x);
-
-            Vector2 pointOne = points[i] + left * _roadWidtgh * 0.5f;
-            Vector2 pointTwo = points[i] - left * _roadWidtgh * 0.5f;
-
-            vertices[vertixIndex] = new Vector3(pointOne.x, 0, pointOne.y);
-            vertices[vertixIndex + 1] = new Vector3(pointTwo.x, 0, pointTwo.y);
+            
+            Vector3 left = new Vector3(-forward.z, 0,forward.x);
+            
+            vertices[vertixIndex] = points[i] + left * _roadWidtgh * 0.5f;
+            vertices[vertixIndex + 1] = points[i] - left * _roadWidtgh * 0.5f;
 
             float completePercent = i / (float) (points.Length - 1);
             float v = 1 - Mathf.Abs(2 * completePercent - 1);

@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using UnityEngine;
 
-public class BezierTest
+public class TestBezier
 {
     [Test]
     public void TestGetPointBezier()

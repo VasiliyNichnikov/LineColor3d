@@ -8,8 +8,6 @@ public class Spline : MonoBehaviour, ISpline
     
     [SerializeField] private Vector3[] _points;
 
-    public CreatorRoad Road => GetComponent<CreatorRoad>();
-    
     public int LengthPoints => _points.Length;
 
     public int NumberCurves
@@ -36,16 +34,11 @@ public class Spline : MonoBehaviour, ISpline
     public Vector3[] GetPointsInCurves(int i)
     {
         int multiplyIByThree = i * 3;
-        return new Vector3[]
+        return new []
         {
             _points[multiplyIByThree], _points[multiplyIByThree + 1], _points[multiplyIByThree + 2],
             _points[multiplyIByThree + 3]
         };
-    }
-    
-    public int GetNumberPoints()
-    {
-        return _points.Length;
     }
 
     public void AddCurve()

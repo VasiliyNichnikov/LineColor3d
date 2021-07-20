@@ -5,15 +5,10 @@ using UnityEngine;
 
 namespace Tests
 {
-    public class SplineTest
+    public class TestSpline
     {
         private ISpline _spline;
-
-        public void SetUp()
-        {
-            _spline = Substitute.For<ISpline>();
-        }
-
+        
         [Test]
         public void TestAddOneCurve()
         {
@@ -24,7 +19,8 @@ namespace Tests
             _spline.AddCurve();
             
             // ASSERT
-            _spline.GetNumberPoints().Returns(7);
+            _spline.LengthPoints.Returns(7);
+            Assert.AreEqual(_spline.LengthPoints, 7);
         }
         
         [Test]
@@ -38,7 +34,8 @@ namespace Tests
             _spline.RemoveCurve();
             
             // ASSERT
-            _spline.GetNumberPoints().Returns(4);
+            _spline.LengthPoints.Returns(4);
+            Assert.AreEqual(_spline.LengthPoints, 4);
         }
     }
 }

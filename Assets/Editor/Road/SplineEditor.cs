@@ -5,11 +5,6 @@ using UnityEngine;
 [CustomEditor(typeof(Spline))]
 public class SplineEditor : Editor
 {
-    private bool RoadAutoUpdate;
-    private bool _onSelectedPoint;
-    private bool _onAddAndRemovePoint;
-    private bool _onRoadSettings;
-
     private Spline _spline;
     private Transform _handleTransform;
     private Quaternion _handleRotation;
@@ -31,26 +26,21 @@ public class SplineEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        _onSelectedPoint = EditorGUILayout.BeginFoldoutHeaderGroup(_onSelectedPoint, "Выбранная точка.");
-        if (_onSelectedPoint && _selectedIndex >= 0 && _selectedIndex < _spline.LengthPoints)
+        DrawPointInspector();
+        _spline.IsActiveHandles = EditorGUILayout.ToggleLeft("Включить отображение ручек.", _spline.IsActiveHandles);
+        SaveChanges("IsActiveHandles change");
+
+        ButtonAddCurve();
+        ButtonRemoveCurve();
+    }
+
+    private void DrawPointInspector()
+    {
+        if (_selectedIndex >= 0 && _selectedIndex < _spline.LengthPoints)
         {
             DrawSelectedPointInspector();
             GUILayout.Space(10);
         }
-        EditorGUILayout.EndFoldoutHeaderGroup();
-        
-        _onAddAndRemovePoint = EditorGUILayout.BeginFoldoutHeaderGroup(_onAddAndRemovePoint, "Добавление/удаление кривых.");
-        if(_onAddAndRemovePoint)
-        {
-            _spline.IsActiveHandles = EditorGUILayout.ToggleLeft("Включить отображение ручек.", _spline.IsActiveHandles);
-            SaveChanges("IsActiveHandles change");
-            
-            ButtonAddCurve();
-            ButtonRemoveCurve();
-        }
-        EditorGUILayout.EndFoldoutHeaderGroup();
-        
-        SettingsUpdateRoad();
     }
 
     private void SaveChanges(string nameChange)
@@ -60,28 +50,6 @@ public class SplineEditor : Editor
             Undo.RecordObject(_spline, nameChange);
             EditorUtility.SetDirty(_spline);
         }
-    }
-
-    private void SettingsUpdateRoad()
-    {
-        _onRoadSettings = EditorGUILayout.BeginFoldoutHeaderGroup(_onRoadSettings, "Настройки дороги.");
-        if (_onRoadSettings && _spline.Road != null)
-        {
-            RoadAutoUpdate =
-                EditorGUILayout.ToggleLeft("Включить автоматическое обновление дороги", RoadAutoUpdate);
-
-            if (!RoadAutoUpdate && GUILayout.Button("Обновить дорогу"))
-            {
-                _spline.Road.UpdateRoad(_spline);
-            }
-            else if (RoadAutoUpdate)
-            {
-                _spline.Road.UpdateRoad(_spline);
-            }
-
-            GUILayout.Space(10);
-        }
-        EditorGUILayout.EndFoldoutHeaderGroup();
     }
 
     private void ButtonAddCurve()
