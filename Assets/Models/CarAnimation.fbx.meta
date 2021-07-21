@@ -8,13 +8,13 @@ ModelImporter:
     second: MAIN|Slim_animation_experemental
   - first:
       74: 8831668247554715238
-    second: MAIN|Tall_animation
+    second: Height
   - first:
       74: -7356558718581760279
-    second: MAIN|Wheels_animation
+    second: Idle
   - first:
       74: 4645512661601085489
-    second: MAIN|Wight_animation
+    second: Width
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -73,7 +73,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: MAIN|Tall_animation
+      name: Height
       takeName: MAIN|Tall_animation
       internalID: 0
       firstFrame: 0
@@ -102,7 +102,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: MAIN|Wheels_animation
+      name: Idle
       takeName: MAIN|Wheels_animation
       internalID: 0
       firstFrame: 0
@@ -131,7 +131,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: MAIN|Wight_animation
+      name: Width
       takeName: MAIN|Wight_animation
       internalID: 0
       firstFrame: 0
