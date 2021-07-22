@@ -1,33 +1,49 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class ChangeSizeCar : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private AnimationClip _clipHeight, _clipWidth;
-    
-    private float _hValue;
-    private float _wValue;
+    [SerializeField] private ParametersAnimation _heightAnimation;
+    [SerializeField] private ParametersAnimation _widthAnimation;
+    private Animator _animator;
 
     private void Start()
     {
-        print(_clipHeight.length);
+        _animator = GetComponent<Animator>();
     }
 
-    private void OnGUI()
+    private void OnEnable()
     {
-        _hValue = GUI.VerticalSlider(new Rect(0, Screen.height / 2 - 150, 20, 300), _hValue, 1.0f, 0.0f);
-        _wValue = GUI.HorizontalSlider(new Rect(Screen.width / 2 - 90, 10, 180, 20), _wValue, 0.0f, 1.0f);
+        EventManager.EventSelectingAnimationCar += SelectingAnimation;
     }
 
-    private void Update()
+    private void OnDisable()
     {
-        PlayClipFromFrame(_clipHeight, 1, _hValue);
-        PlayClipFromFrame(_clipWidth, 2, _wValue);
+        EventManager.EventSelectingAnimationCar -= SelectingAnimation;
+    }
+
+    private void SelectingAnimation(AnimationsType type, float time)
+    {
+        switch (type)
+        {
+            case AnimationsType.Width:
+                PlayClipFromFrame(_widthAnimation.Clip, _widthAnimation.Layer, time);
+                break;
+
+            case AnimationsType.Height:
+                PlayClipFromFrame(_heightAnimation.Clip, _heightAnimation.Layer, time);
+                break;
+            case AnimationsType.None:
+                break;
+
+            default:
+                throw new ArgumentOutOfRangeException(nameof(type), type, null);
+        }
     }
 
     private void PlayClipFromFrame(AnimationClip clip, int layer, float time)
     {
+        time = Mathf.Clamp01(time);
         _animator.Play(clip.name, layer, time);
     }
-    
 }

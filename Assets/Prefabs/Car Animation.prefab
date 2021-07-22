@@ -125,11 +125,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c441e1292d20f450db5ce84f4f1aaec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 2806231834847624530}
-  _clipHeight: {fileID: 8831668247554715238, guid: abaf43bbdfb1f1e438ff7735fbbb5193,
-    type: 3}
-  _clipWidth: {fileID: 4645512661601085489, guid: abaf43bbdfb1f1e438ff7735fbbb5193,
-    type: 3}
+  _heightAnimation:
+    _name: "\u0420\u0430\u0441\u0442\u044F\u0433\u0438\u0432\u0430\u043D\u0438\u0435
+      \u043F\u043E \u0432\u044B\u0441\u043E\u0442\u0435 \u043C\u0430\u0448\u0438\u043D\u044B"
+    _clip: {fileID: 8831668247554715238, guid: abaf43bbdfb1f1e438ff7735fbbb5193, type: 3}
+    _layer: 1
+  _widthAnimation:
+    _name: "\u0420\u0430\u0441\u0442\u044F\u0433\u0438\u0432\u0430\u043D\u0438\u0435
+      \u043F\u043E \u0448\u0438\u0440\u0438\u043D\u0435 \u043C\u0430\u0448\u0438\u043D\u044B"
+    _clip: {fileID: 4645512661601085489, guid: abaf43bbdfb1f1e438ff7735fbbb5193, type: 3}
+    _layer: 2
 --- !u!1 &3160175446050588346
 GameObject:
   m_ObjectHideFlags: 0
