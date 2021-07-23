@@ -1034,7 +1034,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 1585457538}
-  _sensitivity: 0.5
   _movementOnTwoAxes: 1
 --- !u!114 &1736380462
 MonoBehaviour:
@@ -1286,7 +1285,7 @@ PrefabInstance:
     - target: {fileID: 2412528077820847868, guid: b8dad352e4068214e8583e2acd9eb0ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.64
+      value: 1.397
       objectReference: {fileID: 0}
     - target: {fileID: 2412528077820847868, guid: b8dad352e4068214e8583e2acd9eb0ac,
         type: 3}
