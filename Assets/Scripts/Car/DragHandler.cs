@@ -5,6 +5,8 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private bool _movementOnTwoAxes;
+    [SerializeField, Range(1, 10)] private float _sensitivity;
+
     private Vector3 _pointStart;
     private Vector3 _pointEnd;
 
@@ -28,9 +30,9 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     public void OnDrag(PointerEventData eventData)
     {
         _pointEnd = _camera.ScreenToViewportPoint(Input.mousePosition);
-
-        if (_pointEnd == Vector3.zero || _pointStart == Vector3.zero) return;
-        Vector3 dictionary = _pointEnd - _pointStart;
+        
+        Vector3 dictionary = (_pointEnd - _pointStart) * _sensitivity;
+        
         _timeX = _timeSaveX + dictionary.x;
         _timeY = _timeSaveY + dictionary.y;
 
