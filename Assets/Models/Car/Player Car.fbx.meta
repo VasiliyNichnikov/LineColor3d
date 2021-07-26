@@ -1,19 +1,40 @@
 fileFormatVersion: 2
-guid: abaf43bbdfb1f1e438ff7735fbbb5193
+guid: 6bb80859b92409943b5ac7b02e8c77b6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
+      74: 6114911648107268644
+    second: Player_crash
+  - first:
+      74: 1814818714309873340
+    second: MAIN|Crash
+  - first:
+      74: 7064853765194157039
+    second: MAIN|MAINAction
+  - first:
       74: -6071834579757110022
     second: MAIN|Slim_animation_experemental
   - first:
-      74: 8831668247554715238
+      74: 790821285887053499
     second: Height
   - first:
       74: -7356558718581760279
-    second: Idle
+    second: MAIN|Wheels_animation
   - first:
       74: 4645512661601085489
+    second: MAIN|Wight_animation
+  - first:
+      74: -8909573590573323041
+    second: CarCrash
+  - first:
+      74: 3959541512492456234
+    second: Slim_exp.
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: 6795367877268503350
     second: Width
   externalObjects: {}
   materials:
@@ -35,7 +56,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -44,7 +65,65 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: MAIN|Slim_animation_experemental
+      name: Player_crash
+      takeName: MAIN|Car_hit
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CarCrash
+      takeName: MAIN|Crash
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Slim_exp.
       takeName: MAIN|Slim_animation_experemental
       internalID: 0
       firstFrame: 0
@@ -74,7 +153,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Height
-      takeName: MAIN|Tall_animation
+      takeName: MAIN|Tall
       internalID: 0
       firstFrame: 0
       lastFrame: 8
@@ -210,15 +289,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Car
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
