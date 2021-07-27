@@ -6,7 +6,7 @@ using UnityEngine;
 public class SplineEditor : Editor
 {
     private Spline _spline;
-    private Transform _handleTransform;
+    private UnityEngine.Transform _handleTransform;
     private Quaternion _handleRotation;
     private int _selectedIndex;
     private const float _handleSize = 0.15f;
