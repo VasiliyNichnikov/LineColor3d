@@ -19,6 +19,7 @@ public class SplineEditor : Editor
     private void OnSceneGUI()
     {
         _handleTransform = _spline.transform;
+        _handleRotation = _handleTransform.rotation;
         _handleRotation = Tools.pivotRotation == PivotRotation.Local ? _handleRotation : Quaternion.identity;
 
         ShowPoints();

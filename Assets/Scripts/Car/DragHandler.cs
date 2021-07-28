@@ -30,6 +30,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     public void OnDrag(PointerEventData eventData)
     {
         _pointEnd = _camera.ScreenToViewportPoint(Input.mousePosition);
+        EventManager.CallUpdateSizeBoxCollider();
         
         Vector3 dictionary = (_pointEnd - _pointStart) * _sensitivity;
         

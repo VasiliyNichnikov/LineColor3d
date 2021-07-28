@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132722409022501452}
   - component: {fileID: 1132722409022501454}
-  - component: {fileID: 1132722409022501453}
+  - component: {fileID: 4873730039611101171}
   m_Layer: 0
   m_Name: Car
   m_TagString: Untagged
@@ -273,7 +273,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00005510263, y: 0.005246453, z: 0.0045881346}
     m_Extent: {x: 0.0065504257, y: 0.005207164, z: 0.016136229}
   m_DirtyAABB: 0
---- !u!114 &1132722409022501453
+--- !u!114 &4873730039611101171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,22 +282,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1132722409022501451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1eab5e58e9241fa428d894b60c6fe735, type: 3}
+  m_Script: {fileID: 11500000, guid: 9576d8cf33605ac49b7678b000ae0589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sidePoinsCar:
-  - _name: Down point
-    _side: 4
-    _transform: {fileID: 1132722410049766044}
-  - _name: Left point
-    _side: 1
-    _transform: {fileID: 1132722410768474396}
-  - _name: Right
-    _side: 2
-    _transform: {fileID: 1132722410185356318}
-  - _name: Up
-    _side: 0
-    _transform: {fileID: 1132722409564517067}
+  SelectedPointId: 0
 --- !u!1 &1132722409029453312
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +630,7 @@ GameObject:
   - component: {fileID: 1132722409686334323}
   - component: {fileID: 1132722409686334325}
   - component: {fileID: 1132722409686334324}
+  - component: {fileID: 5777755908236487575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -707,6 +696,26 @@ MonoBehaviour:
       \u043F\u043E \u0448\u0438\u0440\u0438\u043D\u0435 \u043C\u0430\u0448\u0438\u043D\u044B"
     _clip: {fileID: 6795367877268503350, guid: 6bb80859b92409943b5ac7b02e8c77b6, type: 3}
     _layer: 2
+--- !u!114 &5777755908236487575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132722409686334322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed6e3e7cba16b4c6899dcd329f5dfd62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _provideBorders: {fileID: 4873730039611101171}
+  _collider: {fileID: 1132722409936331156}
+  _parametersTwoPoints:
+    _name: "\u041F\u0440\u0430\u0432\u0430\u044F \u0438 \u043B\u0435\u0432\u0430\u044F
+      \u0442\u043E\u0447\u043A\u0430"
+    _axis: 0
+    Right: {fileID: 1132722410185356318}
+    Left: {fileID: 1132722410768474396}
 --- !u!1 &1132722409744109358
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +817,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1132722409936331154}
   - component: {fileID: 1132722409936331156}
-  - component: {fileID: 1132722409936331155}
   m_Layer: 0
   m_Name: main
   m_TagString: Untagged
@@ -847,19 +855,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01303009, y: 0.00822005, z: 0.032272458}
   m_Center: {x: 0.000040591956, y: 0.006378639, z: 0.00049699424}
---- !u!114 &1132722409936331155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1132722409936331153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 970fa87f589855040876462ae08b267f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _calculatorBoxCollider: {fileID: 1132722409022501453}
 --- !u!1 &1132722410018508405
 GameObject:
   m_ObjectHideFlags: 0
