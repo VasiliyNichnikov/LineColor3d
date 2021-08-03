@@ -3,7 +3,11 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Scripts"
+        "BoundfoxStudios.FluentAssertions",
+        "Road",
+        "SettingsCollider",
+        "ChangeSize",
+        "PlayerCar"
     ],
     "includePlatforms": [
         "Editor"
