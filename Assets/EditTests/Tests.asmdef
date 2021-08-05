@@ -7,7 +7,8 @@
         "Road",
         "SettingsCollider",
         "ChangeSize",
-        "PlayerCar"
+        "PlayerCar",
+        "Objects"
     ],
     "includePlatforms": [
         "Editor"

@@ -1,4 +1,4 @@
-﻿public enum SideMeshCar
+﻿public enum SideMeshObject
 {
     Forward,
     Behind,

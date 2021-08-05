@@ -6,16 +6,17 @@ public class UpdateSizeProjector : MonoBehaviour
     [SerializeField] private Transform _projector;
     [SerializeField] private ParametersTwoPoints _parametersRightAndLeftPoints;
     [SerializeField] private ParametersTwoPoints _parametersUpAndDownPoints;
+    [SerializeField] private ParametersTwoPoints _parametersForwardAndBehindPoints;
     private CalculateSizeProjector _calculateSizeProjector;
-    
+
     private void OnEnable()
     {
-        EventManagerPlayerCar.EventUpdateSizeBoxCollider += SetSizeProjector;
+        EventManagerPlayerCar.EventUpdateSizeProjector += SetSizeProjector;
     }
 
     private void OnDisable()
     {
-        EventManagerPlayerCar.EventUpdateSizeBoxCollider -= SetSizeProjector;
+        EventManagerPlayerCar.EventUpdateSizeProjector -= SetSizeProjector;
     }
     
     private void Start()
@@ -28,8 +29,7 @@ public class UpdateSizeProjector : MonoBehaviour
     {
         float x = GetSizeProjectorRightAndLeftPointsX();
         float y = GetSizeProjectorUpAndDownPointsY();
-        float z = _projector.localScale.z;
-        
+        float z = GetSizeProjectorForwardAndBehindPointsZ();
         _projector.localScale = new Vector3(x, y, z);
     }
 
@@ -39,7 +39,7 @@ public class UpdateSizeProjector : MonoBehaviour
         Vector3 left = _parametersRightAndLeftPoints.PointTwo.position;
         Axis axis = _parametersRightAndLeftPoints.Axis;
 
-        return _calculateSizeProjector.GetSizeProjectorSelectedAxes(_projector, right, left, axis);
+        return _calculateSizeProjector.GetSizeProjectorSelectedAxes(right, left, axis);
     }
     
     private float GetSizeProjectorUpAndDownPointsY()
@@ -48,6 +48,15 @@ public class UpdateSizeProjector : MonoBehaviour
         Vector3 down = _parametersUpAndDownPoints.PointTwo.position;
         Axis axis = _parametersUpAndDownPoints.Axis;
 
-        return _calculateSizeProjector.GetSizeProjectorSelectedAxes(_projector, up, down, axis);
+        return _calculateSizeProjector.GetSizeProjectorSelectedAxes(up, down, axis);
+    }
+    
+    private float GetSizeProjectorForwardAndBehindPointsZ()
+    {
+        Vector3 forward = _parametersForwardAndBehindPoints.PointOne.position;
+        Vector3 behind = _parametersForwardAndBehindPoints.PointTwo.position;
+        Axis axis = _parametersForwardAndBehindPoints.Axis;
+
+        return _calculateSizeProjector.GetSizeProjectorSelectedAxes(forward, behind, axis);
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 using UnityEngine;
 
-public class ProvideBordersCar : MonoBehaviour
+public class ProvideBordersObject : MonoBehaviour
 {
+    [SerializeField, HideInInspector] public int SelectedPointId;
     private Mesh Mesh
     {
         get
@@ -24,39 +25,38 @@ public class ProvideBordersCar : MonoBehaviour
             throw new Exception("Mesh renderer not found");
         }
     }
-    [SerializeField, HideInInspector] public int SelectedPointId;
-    
-    public Vector3 GetPositionMeshPoint(SideMeshCar side)
+
+    public Vector3 GetPositionMeshPoint(SideMeshObject side)
     {
         Vector3 center = Mesh.bounds.center;
         Vector3 selectedPoint;
         switch (side)
         {
-            case SideMeshCar.Left:
+            case SideMeshObject.Left:
                 selectedPoint = new Vector3(-Mathf.Infinity, center.y, center.z);
                 break;
 
-            case SideMeshCar.Right:
+            case SideMeshObject.Right:
                 selectedPoint = new Vector3(Mathf.Infinity, center.y, center.z);
                 break;
 
-            case SideMeshCar.Forward:
+            case SideMeshObject.Forward:
                 selectedPoint = new Vector3(center.x, center.y, Mathf.Infinity);
                 break;
 
-            case SideMeshCar.Behind:
+            case SideMeshObject.Behind:
                 selectedPoint = new Vector3(center.x, center.y, -Mathf.Infinity);
                 break;
 
-            case SideMeshCar.Up:
+            case SideMeshObject.Up:
                 selectedPoint = new Vector3(center.x, Mathf.Infinity, center.z);
                 break;
             
-            case SideMeshCar.Center:
+            case SideMeshObject.Center:
                 return center;
 
             default:
-                throw new Exception("Сторона не найдена");
+                throw new Exception("Side not found");
         }
 
         return Mesh.bounds.ClosestPoint(selectedPoint);

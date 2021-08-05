@@ -6,14 +6,14 @@ namespace Tests
 {
     public class TestProvideBordersCar
     {
-        private ProvideBordersCar _bordersCar;
+        private ProvideBordersObject _bordersObject;
         private GameObject _cube;
 
         [SetUp]
         public void SetUp()
         {
             _cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            _bordersCar = _cube.AddComponent<ProvideBordersCar>();
+            _bordersObject = _cube.AddComponent<ProvideBordersObject>();
         }
 
         [TearDown]
@@ -30,7 +30,7 @@ namespace Tests
 
             // ACT
             Vector3 meshLeftPoint =
-                _bordersCar.transform.TransformPoint(_bordersCar.GetPositionMeshPoint(SideMeshCar.Left));
+                _bordersObject.transform.TransformPoint(_bordersObject.GetPositionMeshPoint(SideMeshObject.Left));
 
             // ASSERT
             meshLeftPoint.Should().Be(positionLeftPoint);
@@ -45,7 +45,7 @@ namespace Tests
 
             // ACT
             Vector3 meshUpPoint =
-                _bordersCar.transform.TransformPoint(_bordersCar.GetPositionMeshPoint(SideMeshCar.Up));
+                _bordersObject.transform.TransformPoint(_bordersObject.GetPositionMeshPoint(SideMeshObject.Up));
 
             // ASSERT
             meshUpPoint.Should().Be(positionUpPoint);
@@ -59,7 +59,7 @@ namespace Tests
 
             // ACT
             Vector3 meshCenterPoint =
-                _bordersCar.transform.TransformPoint(_bordersCar.GetPositionMeshPoint(SideMeshCar.Center));
+                _bordersObject.transform.TransformPoint(_bordersObject.GetPositionMeshPoint(SideMeshObject.Center));
 
             // ASSERT
             meshCenterPoint.Should().Be(positionCenterPoint);

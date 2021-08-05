@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// [assembly: InternalsVisibleTo("Tests")]
 
-public class ChangeSizeCar : MonoBehaviour
+public class ManagerAnimationsThatChangeSizeCar : MonoBehaviour
 {
     [SerializeField] private ParametersAnimation _heightAnimation;
     [SerializeField] private ParametersAnimation _widthAnimation;
@@ -23,15 +21,15 @@ public class ChangeSizeCar : MonoBehaviour
 
     private void OnEnable()
     {
-        EventManagerPlayerCar.EventSelectingAnimationCar += SelectingAnimation;
+        EventManagerPlayerCar.EventSelectingAnimationAndStartTimeCar += SelectingAnimationAndStartTime;
     }
 
     private void OnDisable()
     {
-        EventManagerPlayerCar.EventSelectingAnimationCar -= SelectingAnimation;
+        EventManagerPlayerCar.EventSelectingAnimationAndStartTimeCar -= SelectingAnimationAndStartTime;
     }
 
-    private void SelectingAnimation(AnimationsType type, float time)
+    private void SelectingAnimationAndStartTime(AnimationsType type, float time)
     {
         switch (type)
         {
@@ -42,6 +40,7 @@ public class ChangeSizeCar : MonoBehaviour
             case AnimationsType.Height:
                 PlayClipFromFrame(_heightAnimation.Clip, _heightAnimation.Layer, time);
                 break;
+            
             case AnimationsType.None:
                 break;
 

@@ -1,10 +1,10 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ProvideBordersCar))]
+[CustomEditor(typeof(ProvideBordersObject))]
 public class ProvideBordersCarEditor : Editor
 {
-    private ProvideBordersCar _borders;
+    private ProvideBordersObject _borders;
     private UnityEngine.Transform _handleTransform;
     private Quaternion _handleRotation;
     private const float _handleSize = 0.1f;
@@ -35,7 +35,7 @@ public class ProvideBordersCarEditor : Editor
 
     private void OnEnable()
     {
-        _borders = (ProvideBordersCar) target;
+        _borders = (ProvideBordersObject) target;
         
         _handleTransform = _borders.transform;
         _borders.SelectedPointId = 0;
