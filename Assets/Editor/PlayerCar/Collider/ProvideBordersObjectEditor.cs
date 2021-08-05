@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [CustomEditor(typeof(ProvideBordersObject))]
-public class ProvideBordersCarEditor : Editor
+public class ProvideBordersObjectEditor : Editor
 {
     private ProvideBordersObject _borders;
     private UnityEngine.Transform _handleTransform;
@@ -10,14 +10,14 @@ public class ProvideBordersCarEditor : Editor
     private const float _handleSize = 0.1f;
 
 
-    private readonly SideMeshCar[] _sides = 
+    private readonly SideMeshObject[] _sides = 
     {
-        SideMeshCar.Up,
-        SideMeshCar.Center,
-        SideMeshCar.Right,
-        SideMeshCar.Left,
-        SideMeshCar.Forward,
-        SideMeshCar.Behind
+        SideMeshObject.Up,
+        SideMeshObject.Center,
+        SideMeshObject.Right,
+        SideMeshObject.Left,
+        SideMeshObject.Forward,
+        SideMeshObject.Behind
     };
 
     private readonly Color[] _colorsButtons =
@@ -76,9 +76,9 @@ public class ProvideBordersCarEditor : Editor
         Handles.Label(_positions[_borders.SelectedPointId], $"Position: {_positions[_borders.SelectedPointId]}");
     }
 
-    private Vector3 GetMeshPositionInGlobalCoordinates(SideMeshCar sideMeshCar)
+    private Vector3 GetMeshPositionInGlobalCoordinates(SideMeshObject sideMeshObject)
     {
-        Vector3 position = _borders.GetPositionMeshPoint(sideMeshCar);
+        Vector3 position = _borders.GetPositionMeshPoint(sideMeshObject);
         position = _handleTransform.TransformPoint(position);
         return position;
     }
