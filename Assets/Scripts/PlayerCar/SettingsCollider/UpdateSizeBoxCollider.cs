@@ -3,6 +3,7 @@
 [RequireComponent(typeof(CalculateSizeBoxCollider))]
 public class UpdateSizeBoxCollider : MonoBehaviour
 {
+    [SerializeField] private bool _configurePointsByMesh;
     [SerializeField] private BoxCollider _collider;
     [SerializeField] private ParametersTwoPoints _parametersRightAndLeftPoints;
     private CalculateSizeBoxCollider _calculateSizeBoxCollider;
@@ -19,18 +20,20 @@ public class UpdateSizeBoxCollider : MonoBehaviour
 
     private void Start()
     {
+        _calculateSizeBoxCollider = GetComponent<CalculateSizeBoxCollider>();
         SetSizeColliderStart();
     }
     
     private void SetSizeColliderStart()
     {
-        _calculateSizeBoxCollider = GetComponent<CalculateSizeBoxCollider>();
         Vector3 colliderSize = _calculateSizeBoxCollider.GetSizeBoxCollider(_collider);
         _collider.size = colliderSize;
 
-        var points = _calculateSizeBoxCollider.GetPositionRigthAndLeftPointMeshCar();
-        _parametersRightAndLeftPoints.PointOne.position = points.right;
-        _parametersRightAndLeftPoints.PointTwo.position = points.left;
+        if (!_configurePointsByMesh) return;
+        
+        var (right, left) = _calculateSizeBoxCollider.GetPositionRigthAndLeftPointMeshCar();
+        _parametersRightAndLeftPoints.PointOne.position = right;
+        _parametersRightAndLeftPoints.PointTwo.position = left;
     }
 
     private void UpdateSizeCollider()
@@ -38,7 +41,7 @@ public class UpdateSizeBoxCollider : MonoBehaviour
         Vector3 right = _parametersRightAndLeftPoints.PointOne.position;
         Vector3 left = _parametersRightAndLeftPoints.PointTwo.position;
 
-        Vector3 colliderSize = _calculateSizeBoxCollider.GetSizeBoxCollider(_collider, right, left);
+        Vector3 colliderSize = CalculateSizeBoxCollider.GetSizeBoxCollider(_collider, right, left);
         _collider.size = colliderSize;
     }
 }

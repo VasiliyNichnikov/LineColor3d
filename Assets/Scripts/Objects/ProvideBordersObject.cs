@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class ProvideBordersObject : MonoBehaviour
+public class ProvideBordersObject : MonoBehaviour, IProvideBordersObject
 {
     [SerializeField, HideInInspector] public int SelectedPointId;
 

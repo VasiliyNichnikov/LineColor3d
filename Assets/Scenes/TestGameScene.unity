@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1050,7 +1050,7 @@ PrefabInstance:
     - target: {fileID: 6123642955458583953, guid: 01d5fd585ab258f4fa88d9720e257679,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6123642955458583953, guid: 01d5fd585ab258f4fa88d9720e257679,
         type: 3}
@@ -1716,7 +1716,7 @@ PrefabInstance:
     - target: {fileID: 6113315037407417191, guid: 8da0729fc52752d4a998bbf4d905ab01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6113315037407417191, guid: 8da0729fc52752d4a998bbf4d905ab01,
         type: 3}
@@ -3435,7 +3435,7 @@ PrefabInstance:
     - target: {fileID: 974671699578886934, guid: 8b9f168ce7c98794a8b6c448489564b3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 974671699578886934, guid: 8b9f168ce7c98794a8b6c448489564b3,
         type: 3}
@@ -3613,7 +3613,7 @@ PrefabInstance:
     - target: {fileID: 4940306886303348167, guid: 96d7bd82869842f46a2d56ccc98d83fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4940306886303348167, guid: 96d7bd82869842f46a2d56ccc98d83fc,
         type: 3}
@@ -5595,7 +5595,7 @@ PrefabInstance:
     - target: {fileID: 4940306886303348167, guid: 96d7bd82869842f46a2d56ccc98d83fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4940306886303348167, guid: 96d7bd82869842f46a2d56ccc98d83fc,
         type: 3}
@@ -6262,6 +6262,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1132722409936331156, guid: 1649210abb195754e81066404c15338c,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6322592438728709754, guid: 1649210abb195754e81066404c15338c,
         type: 3}
       propertyPath: _forwardPoint
@@ -6272,6 +6277,11 @@ PrefabInstance:
       propertyPath: _arrayObjectsRoad
       value: 
       objectReference: {fileID: 1766745277}
+    - target: {fileID: 7034406832523306184, guid: 1649210abb195754e81066404c15338c,
+        type: 3}
+      propertyPath: _configurePointsByMesh
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8091137507883580634, guid: 1649210abb195754e81066404c15338c,
         type: 3}
       propertyPath: m_RootOrder
@@ -6357,26 +6367,6 @@ PrefabInstance:
       propertyPath: StartPosition.z
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2642137937904956284, guid: 1649210abb195754e81066404c15338c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1649210abb195754e81066404c15338c, type: 3}
---- !u!1 &8091137506652385162 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1132722409686334322, guid: 1649210abb195754e81066404c15338c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8091137506652385161}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8091137506652385163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8091137506652385162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cfe89f72e20a4e45a22eff643a8712c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartPosition: {x: 0, y: 0, z: 0}
-  EndPosition: {x: 0, y: 0, z: 280}
-  _speed: 4
