@@ -4,6 +4,7 @@ using UnityEngine;
 public class ProvideBordersObject : MonoBehaviour
 {
     [SerializeField, HideInInspector] public int SelectedPointId;
+
     private Mesh Mesh
     {
         get
@@ -22,36 +23,36 @@ public class ProvideBordersObject : MonoBehaviour
                 }
             }
 
-            throw new Exception("Mesh renderer not found");
+            throw new Exception("Mesh filter and skinned mesh renderer not found");
         }
     }
 
     public Vector3 GetPositionMeshPoint(SideMeshObject side)
     {
         Vector3 center = Mesh.bounds.center;
-        Vector3 selectedPoint;
+        BorderPoint point;
         switch (side)
         {
             case SideMeshObject.Left:
-                selectedPoint = new Vector3(-Mathf.Infinity, center.y, center.z);
+                point = new BorderPointLeft();
                 break;
 
             case SideMeshObject.Right:
-                selectedPoint = new Vector3(Mathf.Infinity, center.y, center.z);
+                point = new BorderPointRight();
                 break;
 
             case SideMeshObject.Forward:
-                selectedPoint = new Vector3(center.x, center.y, Mathf.Infinity);
+                point = new BorderPointForward();
                 break;
 
             case SideMeshObject.Behind:
-                selectedPoint = new Vector3(center.x, center.y, -Mathf.Infinity);
+                point = new BorderPointBehind();
                 break;
 
             case SideMeshObject.Up:
-                selectedPoint = new Vector3(center.x, Mathf.Infinity, center.z);
+                point = new BorderPointUp();
                 break;
-            
+
             case SideMeshObject.Center:
                 return center;
 
@@ -59,7 +60,7 @@ public class ProvideBordersObject : MonoBehaviour
                 throw new Exception("Side not found");
         }
 
+        Vector3 selectedPoint = point.GetPoint(center);
         return Mesh.bounds.ClosestPoint(selectedPoint);
     }
-    
 }

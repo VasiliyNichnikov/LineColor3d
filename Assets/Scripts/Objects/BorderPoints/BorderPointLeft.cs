@@ -1,18 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class BorderPointLeft : MonoBehaviour
+public class BorderPointLeft : BorderPoint
 {
-    // Start is called before the first frame update
-    void Start()
+    public override Vector3 GetPoint(Vector3 center)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return new Vector3(-Mathf.Infinity, center.y, center.z);
     }
 }
