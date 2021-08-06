@@ -30,37 +30,37 @@ public class ProvideBordersObject : MonoBehaviour
     public Vector3 GetPositionMeshPoint(SideMeshObject side)
     {
         Vector3 center = Mesh.bounds.center;
-        BorderPoint point;
-        switch (side)
-        {
-            case SideMeshObject.Left:
-                point = new BorderPointLeft();
-                break;
-
-            case SideMeshObject.Right:
-                point = new BorderPointRight();
-                break;
-
-            case SideMeshObject.Forward:
-                point = new BorderPointForward();
-                break;
-
-            case SideMeshObject.Behind:
-                point = new BorderPointBehind();
-                break;
-
-            case SideMeshObject.Up:
-                point = new BorderPointUp();
-                break;
-
-            case SideMeshObject.Center:
-                return center;
-
-            default:
-                throw new Exception("Side not found");
-        }
+        BorderPoint point = GetBorderPoint(side);
 
         Vector3 selectedPoint = point.GetPoint(center);
         return Mesh.bounds.ClosestPoint(selectedPoint);
     }
+
+    private BorderPoint GetBorderPoint(SideMeshObject side)
+    {
+        switch (side)
+        {
+            case SideMeshObject.Left:
+                return new BorderPointLeft();
+
+            case SideMeshObject.Right:
+                return new BorderPointRight();
+
+            case SideMeshObject.Forward:
+                return new BorderPointForward();
+
+            case SideMeshObject.Behind:
+                return new BorderPointBehind();
+
+            case SideMeshObject.Up:
+                return new BorderPointUp();
+
+            case SideMeshObject.Center:
+                return new BorderPointCenter();
+            
+            default:
+                throw new Exception("Side not found");
+        }
+    }
+    
 }

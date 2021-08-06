@@ -2270,6 +2270,7 @@ GameObject:
   - component: {fileID: 1050068014}
   - component: {fileID: 1050068013}
   - component: {fileID: 1050068012}
+  - component: {fileID: 1050068015}
   m_Layer: 5
   m_Name: Click Handler
   m_TagString: Untagged
@@ -2308,8 +2309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa7ebd64a769e64282dfcec0a0b9cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 353682628}
-  _sensitivity: 2
 --- !u!114 &1050068013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2347,6 +2346,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050068010}
   m_CullTransparentMesh: 0
+--- !u!114 &1050068015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050068010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0310cb4a02716fc47a02fe246e9a49a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MousePositionDown: {x: 0, y: 0}
+  MousePositionDrag: {x: 0, y: 0}
+  _camera: {fileID: 353682628}
+  _sensitivity: 3.5
 --- !u!1 &1063826952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,7 +3296,7 @@ PrefabInstance:
     - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.78
+      value: 2.76
       objectReference: {fileID: 0}
     - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
         type: 3}
@@ -5013,7 +5028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885065041}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0, z: 37.35}
+  m_LocalPosition: {x: 0, y: 0, z: 37.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1621523506}

@@ -71,4 +71,17 @@ public class TestBorderPoints
         positionPoint.Should().Be(new Vector3(_center.x, _center.y, -Mathf.Infinity));
     }
     
+    [Test]
+    public void WhenGetPoint_AndGetBorderPointCenter_ThenPositionPointShouldBeVector_CenterX_CenterY_CenterZ()
+    {
+        // ARRANGE
+        BorderPoint center = new BorderPointCenter();
+
+        // ACT
+        Vector3 positionPoint = center.GetPoint(_center);
+
+        // ASSERT
+        positionPoint.Should().Be(new Vector3(_center.x, _center.y, _center.z));
+    }
+    
 }
