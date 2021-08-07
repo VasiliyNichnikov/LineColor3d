@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="27fcc853-54e2-47f8-b8a5-90137ecb3b88" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/Obstacle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/Obstacle/SettingsRearPointOfObstacleEditor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Editor/Obstacle/SettingsRearPointOfObstacleEditor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle/Obstacle.asmdef" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle/Obstacle.asmdef.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle/ParameterObstacle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle/ParameterObstacle.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle/SettingsRearPointOfObstacle.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Obstacle/SettingsRearPointOfObstacle.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EditTests/Tests.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EditTests/Tests.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Obstacles/Car Bot Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Obstacles/Car Bot Blue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/IProvideBordersObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/IProvideBordersObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/ProvideBordersObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/ProvideBordersObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/InteractionWithObstacles.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/InteractionWithObstacles.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/SortArrayObjectsRoad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/ArrayObjectsRoad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/SortArrayObjectsRoad.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/ArrayObjectsRoad.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsProjector/UpdateLocationForwardPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsProjector/UpdateLocationForwardPoint.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CAFB29D5-2338-47FB-B4ED-CF8D7C32B1E3/7a/83787865/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.24/UnityEngine.TestRunner/NUnitExtensions/ConstructDelegator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/Road/TestSpline.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/PlayerCar/Drag/TestDetectionClick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/PlayerCar/SettingsCollider/TestCalculateTwoPoints.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Road/CreatorRoadEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Road/SplineEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Road/Spline.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/UpdateSizeBoxColliderAxesX.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/SideMeshObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Road/CreatorRoad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/ArrayObjectsRoad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/Objects/TestProvideBordersCar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Obstacle/SettingsRearPointOfObstacleEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointLeft.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointBehind.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/Objects/BorderPoints/TestBorderPoints.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/PlayerCar/Drag/TestCalculatorTimeAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointCenter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/Road/TestBezier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacle/ParameterObstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/028e4d71153d4ed5ac6bee0dfc08aa3b117200/67/28cd3632/Camera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D7780361-FB3A-4931-9B9A-C6C58E81F7DE/21/bb9a6404/AnimatorStateInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EditTests/PlayerCar/SettingsCollider/TestCalculateSizeBoxCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A555715E-F291-462E-B190-C2C939543F55/17/fea65a4d/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Obstacle/SettingsRearPointOfObstacle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerCar/Drag/CalculatorTimeAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81A2A079-7F3C-43B2-AABD-7604740BCD48/a7/fb872e7d/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerCar/ChangeSize/ManagerAnimationsThatChangeSizeCar.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/EditTests/PlayerCar/TestChangeSizeCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/TypePoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/SettingsCollider/DisplaySettingsTwoPointsDrawer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersTwoPointsTransform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/SettingsCollider/ParametersTwoPointsTransformDrawer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersTwoPointsVector3.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersTwoPointsSideMeshCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersPoint/ParametersPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersPoint/ParametersPointSideMeshCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersPoint/ParametersPointTransform.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersPoint/ParametersPointVector3.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersTwoPoints/ParametersTwoPoints.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersPoint/SelectedPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/SettingsCollider/ParametersPointDrawer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/SettingsCollider/ParametersPointEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/SelectedPoint/SelectedPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/SettingsCollider/DisplaySettingsTwoPointsEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/CalculateAndUpdateBoxCollider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/DisplaySettingsTwoPoints.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/CalculateDistancePointsOnTheSelectedAxis.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersLeftAndRightPoints.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ParametersTwoPoints.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/ProvideBordersCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/SettingsCollider/ProvideBordersCarEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/EventManagerPlayerCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/DragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TestProvideBordersCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/UpdateSizeBoxCollider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/InteractionWithObstacles/SortArrayObjectsRoad.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsProjector/UpdateLocationForwardPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsProjector/CalculateSizeProjector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsProjector/UpdateSizeProjector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/ChangeSize/ChangeSizeCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/ChangeSize/ManagerAnimationsThatChangeSizeCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/SettingsCollider/CalculateSizeBoxCollider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/ProvideBordersCar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/ProvideBordersObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Editor/PlayerCar/Collider/ProvideBordersObjectEditor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/SideMeshObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/InteractionWithObstacles/SortArrayObjectsRoad.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointBehind.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointLeft.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointUp.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointRight.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPoint.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointForward.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCar/Drag/DragHandler.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/BorderPoints/BorderPointCenter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Objects/ProvideBordersObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/EditTests/Objects/BorderPoints/TestBorderPoints.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1uFbBEmrj1RwJ5w9RpcKytsYTVR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27fcc853-54e2-47f8-b8a5-90137ecb3b88" name="Default Changelist" comment="" />
+      <created>1624264166081</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624264166081</updated>
+      <workItem from="1624264208176" duration="5841000" />
+      <workItem from="1624379572949" duration="3702000" />
+      <workItem from="1624442875982" duration="799000" />
+      <workItem from="1624446379460" duration="12527000" />
+      <workItem from="1625597931580" duration="5864000" />
+      <workItem from="1625655789099" duration="596000" />
+      <workItem from="1626174409836" duration="7821000" />
+      <workItem from="1626199356855" duration="604000" />
+      <workItem from="1626248736318" duration="5645000" />
+      <workItem from="1626261251411" duration="658000" />
+      <workItem from="1626261939842" duration="16501000" />
+      <workItem from="1626368525365" duration="6610000" />
+      <workItem from="1626428500961" duration="11069000" />
+      <workItem from="1626600079206" duration="16894000" />
+      <workItem from="1626717762269" duration="2511000" />
+      <workItem from="1626731304402" duration="3280000" />
+      <workItem from="1626774715272" duration="8831000" />
+      <workItem from="1626869474498" duration="8063000" />
+      <workItem from="1626969934409" duration="9990000" />
+      <workItem from="1627137166010" duration="2122000" />
+      <workItem from="1627227383304" duration="4489000" />
+      <workItem from="1627299961766" duration="809000" />
+      <workItem from="1627305077033" duration="9247000" />
+      <workItem from="1627382656059" duration="5273000" />
+      <workItem from="1627510418024" duration="4107000" />
+      <workItem from="1627576404202" duration="993000" />
+      <workItem from="1627650406392" duration="7559000" />
+      <workItem from="1627915410571" duration="10410000" />
+      <workItem from="1627989559114" duration="17840000" />
+      <workItem from="1628087169844" duration="885000" />
+      <workItem from="1628089237275" duration="6057000" />
+      <workItem from="1628233445055" duration="2822000" />
+      <workItem from="1628236843944" duration="10246000" />
+      <workItem from="1628261576469" duration="7610000" />
+      <workItem from="1628315480142" duration="14204000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

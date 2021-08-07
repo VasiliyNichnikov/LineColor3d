@@ -8,7 +8,8 @@
         "SettingsCollider",
         "ChangeSize",
         "PlayerCar",
-        "Objects"
+        "Objects",
+        "Obstacle"
     ],
     "includePlatforms": [
         "Editor"
