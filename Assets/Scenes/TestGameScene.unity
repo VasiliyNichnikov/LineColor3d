@@ -13685,6 +13685,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1480396311}
   m_Mesh: {fileID: -2124705421725058983, guid: 3740cd30069408e4ea5352abd92a1a9e, type: 3}
+--- !u!114 &1480829699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4873730039611101171, guid: 1649210abb195754e81066404c15338c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8091137506652385161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9576d8cf33605ac49b7678b000ae0589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1484538788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21658,6 +21670,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Behind Point Projector
       objectReference: {fileID: 0}
+    - target: {fileID: 5405261804335613459, guid: 1649210abb195754e81066404c15338c,
+        type: 3}
+      propertyPath: _provideBordersObject
+      value: 
+      objectReference: {fileID: 1480829699}
     - target: {fileID: 6322592438728709754, guid: 1649210abb195754e81066404c15338c,
         type: 3}
       propertyPath: _projector

@@ -1,10 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-public class ProvideBordersObject : MonoBehaviour
+public class ProvideBordersObject : MonoBehaviour, IProvideBordersObject
 {
     [SerializeField, HideInInspector] public int SelectedPointId;
-
+    public Transform Transform => GetComponent<Transform>();
+    
     private Mesh Mesh
     {
         get
