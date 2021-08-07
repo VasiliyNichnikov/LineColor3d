@@ -28,17 +28,18 @@ public class SettingsRearPointOfObstacleEditor : Editor
 
     public void OnSceneGUI()
     {
-        if (Event.current.type == EventType.Repaint && _settingsRearPointOfObstacle.ParameterObstacles != null &&
-            _settingsRearPointOfObstacle.ParameterObstacles.Length > 0)
-        {
-            Vector3 point = _settingsRearPointOfObstacle.GetCenterPointTransformObjects();
-            float size = HandleUtility.GetHandleSize(point);
-            Handles.color = Color.red;
-            Handles.SphereHandleCap(0, point, Quaternion.identity, size * _handleSize, EventType.Repaint);
+        if (Event.current.type != EventType.Repaint || _settingsRearPointOfObstacle.ParameterObstacles == null ||
+            _settingsRearPointOfObstacle.ParameterObstacles.Length <= 0) return;
+        Vector3 point = _settingsRearPointOfObstacle.GetCenterPointTransformObjects();
+        float size = HandleUtility.GetHandleSize(point);
+        Handles.color = Color.red;
+        Handles.SphereHandleCap(0, point, Quaternion.identity, size * _handleSize, EventType.Repaint);
 
-            size = HandleUtility.GetHandleSize(_behind);
+        if (_settingsRearPointOfObstacle.Point != null)
+        {
             Handles.color = Color.black;
-            _behind = new Vector3(point.x, _behind.y, _behind.z);
+            _behind = _settingsRearPointOfObstacle.Point.position;
+            size = HandleUtility.GetHandleSize(_behind);
             Handles.SphereHandleCap(1, _behind, Quaternion.identity, size * _handleSize, EventType.Repaint);
         }
     }
