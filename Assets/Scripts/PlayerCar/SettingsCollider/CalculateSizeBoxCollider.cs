@@ -2,6 +2,11 @@
 
 public class CalculateSizeBoxCollider : MonoBehaviour
 {
+    public ProvideBordersObject ProvideBordersObject
+    {
+        set => _provideBorders = value;
+    }
+
     [SerializeField] private ProvideBordersObject _provideBorders;
 
     public Vector3 GetSizeBoxCollider(BoxCollider boxCollider)
@@ -15,7 +20,7 @@ public class CalculateSizeBoxCollider : MonoBehaviour
         return new Vector3(x, colliderSize.y, colliderSize.z);
     }
 
-    public static Vector3 GetSizeBoxCollider(BoxCollider boxCollider, Vector3 right, Vector3 left)
+    public Vector3 GetSizeBoxCollider(BoxCollider boxCollider, Vector3 right, Vector3 left)
     {
         Vector3 colliderSize = boxCollider.size;
 
