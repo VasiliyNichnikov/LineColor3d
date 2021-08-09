@@ -1,0 +1,16 @@
+{
+    "name": "GameOver",
+    "references": [
+        "GUID:b25ae2c25a65c7f4a9be8619aa083c80",
+        "GUID:a65d9a73e86e8a16094732b640e510ef"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

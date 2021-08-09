@@ -615,6 +615,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1132722409686334323}
   - component: {fileID: 1132722409686334325}
+  - component: {fileID: 4833923550099462959}
   - component: {fileID: 1132722409686334324}
   - component: {fileID: 5405261804335613459}
   - component: {fileID: 7034406832523306184}
@@ -665,6 +666,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4833923550099462959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132722409686334322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfe89f72e20a4e45a22eff643a8712c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartPosition: {x: 0, y: 0, z: 0}
+  EndPosition: {x: 0, y: 0, z: 0}
+  _speed: 0
 --- !u!114 &1132722409686334324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,7 +713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceacb90598c746e4da2d3efde61080cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _provideBorders: {fileID: 4873730039611101171}
 --- !u!114 &7034406832523306184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,12 +725,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6967f44f2abc61949afc8b2910b08024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _configurePointsByMesh: 0
   _collider: {fileID: 1132722409936331156}
   _parametersRightAndLeftPoints:
     _name: Point right and left
     _axis: 0
     PointOne: {fileID: 1132722410185356318}
     PointTwo: {fileID: 1132722410768474396}
+  _provideBordersObject: {fileID: 0}
 --- !u!1 &1132722409744109358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,48 +1274,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9126fd89b35018b459af5e4259130684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxDistance: 0
+  _projector: {fileID: 0}
   _forwardPoint: {fileID: 0}
   _arrayObjectsRoad: {fileID: 0}
---- !u!114 &2642137937904956284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882255755510581539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f7a291ee8f1d334f97cde3f8a13ac8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8489165413790377266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882255755510581539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0346c0f51f59bd54a9513ea1369dfcf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projector: {fileID: 1248848463296517017}
-  _parametersRightAndLeftPoints:
-    _name: Point right and left
-    _axis: 0
-    PointOne: {fileID: 1132722410185356318}
-    PointTwo: {fileID: 1132722410768474396}
-  _parametersUpAndDownPoints:
-    _name: Point up and down
-    _axis: 1
-    PointOne: {fileID: 1132722409564517067}
-    PointTwo: {fileID: 1132722410049766044}
-  _parametersForwardAndBehindPoints:
-    _name: Point forward and behind
-    _axis: 2
-    PointOne: {fileID: 0}
-    PointTwo: {fileID: 7540144471330398916}
 --- !u!1 &4334101938520578482
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,6 +1560,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1132722409686334323}
     m_Modifications:
+    - target: {fileID: 3686070826201545250, guid: 6fdea62ed12ec4243ad387727cbfa30c,
+        type: 3}
+      propertyPath: _parametersUpAndDownPoints.PointOne
+      value: 
+      objectReference: {fileID: 1132722409564517067}
+    - target: {fileID: 3686070826201545250, guid: 6fdea62ed12ec4243ad387727cbfa30c,
+        type: 3}
+      propertyPath: _parametersUpAndDownPoints.PointTwo
+      value: 
+      objectReference: {fileID: 1132722410049766044}
+    - target: {fileID: 3686070826201545250, guid: 6fdea62ed12ec4243ad387727cbfa30c,
+        type: 3}
+      propertyPath: _parametersRightAndLeftPoints.PointOne
+      value: 
+      objectReference: {fileID: 1132722410185356318}
+    - target: {fileID: 3686070826201545250, guid: 6fdea62ed12ec4243ad387727cbfa30c,
+        type: 3}
+      propertyPath: _parametersRightAndLeftPoints.PointTwo
+      value: 
+      objectReference: {fileID: 1132722410768474396}
+    - target: {fileID: 3686070826201545250, guid: 6fdea62ed12ec4243ad387727cbfa30c,
+        type: 3}
+      propertyPath: _parametersForwardAndBehindPoints.PointTwo
+      value: 
+      objectReference: {fileID: 7540144471330398916}
     - target: {fileID: 3952938377181095864, guid: 6fdea62ed12ec4243ad387727cbfa30c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1646,12 +1650,6 @@ PrefabInstance:
 --- !u!4 &1248848463296517017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3952938377181095864, guid: 6fdea62ed12ec4243ad387727cbfa30c,
-    type: 3}
-  m_PrefabInstance: {fileID: 2850608746084152353}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1882255755510581539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4436177772801637634, guid: 6fdea62ed12ec4243ad387727cbfa30c,
     type: 3}
   m_PrefabInstance: {fileID: 2850608746084152353}
   m_PrefabAsset: {fileID: 0}

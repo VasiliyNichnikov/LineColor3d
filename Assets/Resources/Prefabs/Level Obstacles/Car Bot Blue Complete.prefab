@@ -1,0 +1,189 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1030799856516961337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8079404212681642587}
+  m_Layer: 0
+  m_Name: Behind Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8079404212681642587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030799856516961337}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.52182245, z: -1.5497329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4157904368777388481}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1180019827174583772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4157904368777388481}
+  - component: {fileID: 9068384445533834161}
+  m_Layer: 0
+  m_Name: Car Bot Blue Complete
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4157904368777388481
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180019827174583772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6034256879126717537}
+  - {fileID: 8079404212681642587}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9068384445533834161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180019827174583772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856b548233468f34d97489dae62958e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParameterObstacles:
+  - {fileID: 9012805938223814197}
+  Point: {fileID: 8079404212681642587}
+--- !u!114 &9012805938223814197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4103130848578291998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Transform: {fileID: 6034256879126717537}
+  ProvideBorders: {fileID: 1743680198271698361}
+--- !u!1001 &7689384889005281624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4157904368777388481}
+    m_Modifications:
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928726218397341766, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+        type: 3}
+      propertyPath: m_Name
+      value: Car Bot Blue
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6261926620888578228, guid: 05dba20f7d8abc844b86c24c0c26ae7d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 05dba20f7d8abc844b86c24c0c26ae7d, type: 3}
+--- !u!1 &4103130848578291998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5928726218397341766, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7689384889005281624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6034256879126717537 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4110610498308060473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7689384889005281624}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1743680198271698361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8251972445422261473, guid: 05dba20f7d8abc844b86c24c0c26ae7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7689384889005281624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9576d8cf33605ac49b7678b000ae0589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

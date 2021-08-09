@@ -3,6 +3,7 @@
 public static class EventManagerPlayerCar
 {
     public static Action<AnimationsType, float> EventSelectingAnimationAndStartTimeCar;
+    public static Action EventGameOver;
     public static Action EventUpdateSizeBoxCollider;
     public static Action EventUpdateSizeProjector;
 
@@ -19,5 +20,10 @@ public static class EventManagerPlayerCar
     public static void CallUpdateSizeProjector()
     {
         EventUpdateSizeProjector?.Invoke();
+    }
+
+    public static void CallGameOver()
+    {
+        EventGameOver?.Invoke();
     }
 }

@@ -1,8 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class ParameterObstacle : MonoBehaviour
+[Serializable]
+public class ParameterObstacle : MonoBehaviour, IParameterObstacle
 {
-    public string Name;
-    public Transform Transform;
-    public ProvideBordersObject ProvideBorders;
+    public Transform Transform => _transform;
+    public ProvideBordersObject ProvideBorders => _provideBorders;
+
+    [SerializeField] private string _name;
+    [SerializeField] private Transform _transform;
+    [SerializeField] private ProvideBordersObject _provideBorders;
 }

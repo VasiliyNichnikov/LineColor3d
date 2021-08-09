@@ -17,7 +17,6 @@ public class DetectionClick : MonoBehaviour
 
     public float Sensitivity
     {
-        get => _sensitivity;
         set
         {
             if (value >= 1 && value <= 10)

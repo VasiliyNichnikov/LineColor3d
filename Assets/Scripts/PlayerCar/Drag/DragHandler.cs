@@ -11,6 +11,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     {
         _timeAnimation = new CalculatorTimeAnimation();
         _detectionClick = GetComponent<DetectionClick>();
+        _timeAnimation.ResetingSaveTimeXAndSaveTimeY();
     }
 
     public void OnPointerDown(PointerEventData eventData)

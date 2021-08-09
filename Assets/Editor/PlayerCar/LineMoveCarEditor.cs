@@ -35,7 +35,6 @@ public class LineMoveCarEditor : Editor
         {
             Undo.RecordObject(_lineMove, "Move point");
             EditorUtility.SetDirty(_lineMove);
-            position = _handleTransform.InverseTransformPoint(position);
         }
     }
     

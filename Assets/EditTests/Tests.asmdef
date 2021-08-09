@@ -9,7 +9,8 @@
         "ChangeSize",
         "PlayerCar",
         "Objects",
-        "Obstacle"
+        "Obstacle",
+        "InteractionWithObstacles"
     ],
     "includePlatforms": [
         "Editor"

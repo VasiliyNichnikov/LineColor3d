@@ -1,26 +1,30 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
+[assembly: InternalsVisibleTo("Tests")]
 public class ArrayObjectsRoad : MonoBehaviour
 {
-    [SerializeField] private SettingsRearPointOfObstacle[] _settingsRearPointOfObstacle;
+    private IDisplayAndGetBehindPointOfObstacle GetBehindPointOfObstacle(int index) =>
+        _getBehindPointOfObstacles[index] as IDisplayAndGetBehindPointOfObstacle;
+
+    [SerializeField, InterfaceType(typeof(IDisplayAndGetBehindPointOfObstacle))]
+    private Object[] _getBehindPointOfObstacles;
+    
     private Queue<Vector3> _mapPositions;
+    private SortObjectsRoad _sortObjectsRoad;
+    
+    private IDisplayAndGetBehindPointOfObstacle[] GetArrayBehindPointOfObstacles()
+    {
+        return GetInterfaceArray.Getting(_getBehindPointOfObstacles, GetBehindPointOfObstacle);
+    }
     
     private void Awake()
     {
-        _mapPositions = new Queue<Vector3>();
-        Vector3[] points = new Vector3[_settingsRearPointOfObstacle.Length];
-        for (int i = 0; i < points.Length; i++)
-        {
-            points[i] = _settingsRearPointOfObstacle[i].Point.position;
-        }
-    
-        points = points.OrderBy(v => v.z).ToArray();
-        foreach (var position in points)
-        {
-            _mapPositions.Enqueue(position);
-        }
+        IDisplayAndGetBehindPointOfObstacle[] displayAndGetBehindPoint = GetArrayBehindPointOfObstacles();
+        _sortObjectsRoad = new SortObjectsRoad();
+        _mapPositions = _sortObjectsRoad.GettingSortArray(displayAndGetBehindPoint);
     }
 
     public Vector3 GetAndRemoveFirstElementPosition()
