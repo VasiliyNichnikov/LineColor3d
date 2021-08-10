@@ -6,10 +6,8 @@ using UnityEngine.Serialization;
 public class ParametersTwoPoints
 {
     [SerializeField] private string _name;
-    [SerializeField] private Axis _axis;
     public Transform PointOne;
     public Transform PointTwo;
 
     public string Name => _name;
-    public Axis Axis => _axis;
 }

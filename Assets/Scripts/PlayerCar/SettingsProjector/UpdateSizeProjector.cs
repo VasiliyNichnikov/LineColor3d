@@ -34,26 +34,26 @@ public class UpdateSizeProjector : MonoBehaviour
     {
         Vector3 right = _parametersRightAndLeftPoints.PointOne.position;
         Vector3 left = _parametersRightAndLeftPoints.PointTwo.position;
-        Axis axis = _parametersRightAndLeftPoints.Axis;
+        SubtractionAxis subtractionAxisX = new SubtractionAxisX();
 
-        return CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(right, left, axis);
+        return CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisX, right, left);
     }
     
     private float GetSizeProjectorUpAndDownPointsY()
     {
         Vector3 up = _parametersUpAndDownPoints.PointOne.position;
         Vector3 down = _parametersUpAndDownPoints.PointTwo.position;
-        Axis axis = _parametersUpAndDownPoints.Axis;
+        SubtractionAxis subtractionAxisY = new SubtractionAxisY();
 
-        return CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(up, down, axis);
+        return CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisY, up, down);
     }
     
     private float GetSizeProjectorForwardAndBehindPointsZ()
     {
         Vector3 forward = _parametersForwardAndBehindPoints.PointOne.position;
         Vector3 behind = _parametersForwardAndBehindPoints.PointTwo.position;
-        Axis axis = _parametersForwardAndBehindPoints.Axis;
+        SubtractionAxis subtractionAxisZ = new SubtractionAxisZ();
 
-        return CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(forward, behind, axis);
+        return CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisZ, forward, behind);
     }
 }

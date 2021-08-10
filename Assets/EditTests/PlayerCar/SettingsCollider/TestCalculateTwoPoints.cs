@@ -10,9 +10,10 @@ public class TestCalculateTwoPoints
         // ARRANGE
         Vector3 one = new Vector3(0, 23, 34);
         Vector3 two = new Vector3(23, 4, 2);
+        SubtractionAxis subtractionAxisX = new SubtractionAxisX();
 
         // ACT
-        float lengthX = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(one, two, Axis.X);
+        float lengthX = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisX, one, two);
 
         // ASSERT
         lengthX.Should().Be(23);
@@ -24,9 +25,10 @@ public class TestCalculateTwoPoints
         // ARRANGE
         Vector3 one = new Vector3(0, 23, 34);
         Vector3 two = new Vector3(23, 4, 2);
+        SubtractionAxis subtractionAxisY = new SubtractionAxisY();
 
         // ACT
-        float lengthY = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(one, two, Axis.Y);
+        float lengthY = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisY, one, two);
 
         // ASSERT
         lengthY.Should().Be(19);
@@ -38,9 +40,10 @@ public class TestCalculateTwoPoints
         // ARRANGE
         Vector3 one = new Vector3(0, 23, 34);
         Vector3 two = new Vector3(23, 4, 2);
+        SubtractionAxis subtractionAxisZ = new SubtractionAxisZ();
 
         // ACT
-        float lengthZ = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(one, two, Axis.Z);
+        float lengthZ = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisZ, one, two);
 
         // ASSERT
         lengthZ.Should().Be(32);

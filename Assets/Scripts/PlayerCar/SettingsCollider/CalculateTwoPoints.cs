@@ -3,21 +3,8 @@ using UnityEngine;
 
 public class CalculateTwoPoints
 {
-    public static float GetLengthBetweenTwoPointsOnSelectedAxis(Vector3 one, Vector3 two, Axis axis)
+    public static float GetLengthBetweenTwoPointsOnSelectedAxis(SubtractionAxis axis, Vector3 one, Vector3 two)
     {
-        switch (axis)
-        {
-            case Axis.X:
-                return Mathf.Abs(one.x - two.x);
-
-            case Axis.Y:
-                return Mathf.Abs(one.y - two.y);
-
-            case Axis.Z:
-                return Mathf.Abs(one.z - two.z);
-
-            default:
-                throw new ArgumentOutOfRangeException(nameof(axis), axis, null);
-        }
+        return Mathf.Abs(axis.Subtract(one, two));
     }
 }

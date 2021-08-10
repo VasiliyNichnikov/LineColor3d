@@ -9,15 +9,17 @@ public class CalculateSizeBoxCollider : MonoBehaviour
         Vector3 right = provideBorders.GetPositionMeshPoint(SideMeshObject.Right);
         Vector3 left = provideBorders.GetPositionMeshPoint(SideMeshObject.Left);
 
-        float x = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(right, left, Axis.X);
+        SubtractionAxis subtractionAxisX = new SubtractionAxisX();
+        float x = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisX, right, left);
         return new Vector3(x, colliderSize.y, colliderSize.z);
     }
 
     public Vector3 GetSizeBoxCollider(BoxCollider boxCollider, Vector3 right, Vector3 left)
     {
         Vector3 colliderSize = boxCollider.size;
-
-        float x = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(right, left, Axis.X) / 100f;
+        
+        SubtractionAxis subtractionAxisX = new SubtractionAxisX();
+        float x = CalculateTwoPoints.GetLengthBetweenTwoPointsOnSelectedAxis(subtractionAxisX,right, left) / 100f;
         return new Vector3(x, colliderSize.y, colliderSize.z);
     }
 

@@ -21,7 +21,7 @@ public class TestCalculatorTimeAnimation
         _timeAnimation.ChangingValuesTimeXAndTimeY(_direction);
         
         // ASSERT
-        _timeAnimation.TimeX.Should().Be(0.1f);
+        _timeAnimation.TimeX.Should().Be(0.5f);
     }
     
     [Test]

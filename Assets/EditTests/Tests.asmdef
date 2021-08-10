@@ -4,13 +4,7 @@
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
         "BoundfoxStudios.FluentAssertions",
-        "Road",
-        "SettingsCollider",
-        "ChangeSize",
-        "PlayerCar",
-        "Objects",
-        "Obstacle",
-        "InteractionWithObstacles"
+        "Scripts"
     ],
     "includePlatforms": [
         "Editor"

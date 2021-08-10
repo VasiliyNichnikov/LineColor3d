@@ -1,6 +1,6 @@
 ﻿public enum AnimationsType
 {
-    None,
-    Height,
-    Width
+    None = -1,
+    Height = 0,
+    Width = 1
 }

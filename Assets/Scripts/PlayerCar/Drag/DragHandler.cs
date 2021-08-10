@@ -6,6 +6,8 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
 {
     private CalculatorTimeAnimation _timeAnimation;
     private DetectionClick _detectionClick;
+    public CalculatorTimeAnimation TimeAnimation => _timeAnimation;
+    public DetectionClick DetectionClick => _detectionClick;
 
     private void Start()
     {
@@ -16,13 +18,15 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (GameOver.IsCrashed) return;
         _detectionClick.MousePositionDown = eventData.position;
     }
     
     public void OnDrag(PointerEventData eventData)
     {
-        _detectionClick.MousePositionDrag = eventData.position;
+        if (GameOver.IsCrashed) return;
         
+        _detectionClick.MousePositionDrag = eventData.position;
         Vector2 direction = _detectionClick.GetDirection();
         _timeAnimation.ChangingValuesTimeXAndTimeY(direction);
         UpdateSizeBoxColliderAndProjector();
@@ -30,6 +34,8 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     
     private static void UpdateSizeBoxColliderAndProjector()
     {
+        if (GameOver.IsCrashed) return;
+        
         EventManagerPlayerCar.CallUpdateSizeBoxCollider();
         EventManagerPlayerCar.CallUpdateSizeProjector();
     }
@@ -47,7 +53,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     
     private void Update()
     {
-        EventManagerPlayerCar.CallSelectingAnimationCar(AnimationsType.Width, _timeAnimation.TimeX);
-        EventManagerPlayerCar.CallSelectingAnimationCar(AnimationsType.Height, _timeAnimation.TimeY);
+        EventManagerPlayerCar.CallSelectingAnimationCar((int)AnimationsType.Width, _timeAnimation.TimeX);
+        EventManagerPlayerCar.CallSelectingAnimationCar((int)AnimationsType.Height, _timeAnimation.TimeY);
     }
 }
