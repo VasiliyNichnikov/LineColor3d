@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5644809690275194531}
-  - component: {fileID: 2864795768307881468}
+  - component: {fileID: 7938394977726406241}
   m_Layer: 0
   m_Name: Truck CrackedTrees
   m_TagString: Untagged
@@ -124,12 +124,11 @@ Transform:
   m_Children:
   - {fileID: 2856157803476942814}
   - {fileID: 544409971279451310}
-  - {fileID: 1905961271688169470}
   - {fileID: 3152849078532491969}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2864795768307881468
+--- !u!114 &7938394977726406241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,12 +137,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4980334872187468825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
+  m_Script: {fileID: 11500000, guid: ea948aa22e1ab124eb9c8e5d01dfb644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Transform: {fileID: 5644809690275194531}
-  ProvideBorders: {fileID: 2734427723980460418}
+  _parametersObstacle:
+  - {fileID: 2585593076397726771}
+  _point: {fileID: 0}
 --- !u!1 &7137034732292695212
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +156,7 @@ GameObject:
   - component: {fileID: 6894075589203356366}
   - component: {fileID: 37935684783303352}
   - component: {fileID: 2734427723980460418}
+  - component: {fileID: 2585593076397726771}
   m_Layer: 9
   m_Name: Fake Center
   m_TagString: Untagged
@@ -172,11 +172,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7137034732292695212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.002, y: 1.23, z: -0.212}
+  m_LocalPosition: {x: 2.002, y: 1.23, z: -0.142}
   m_LocalScale: {x: 1.4125, y: 0.18691, z: 0.07546874}
   m_Children: []
   m_Father: {fileID: 5644809690275194531}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8202345659996787833
 MeshFilter:
@@ -251,6 +251,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedPointId: 0
+--- !u!114 &2585593076397726771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7137034732292695212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Truck Fake Center
+  _transform: {fileID: 3152849078532491969}
+  _provideBorders: {fileID: 2734427723980460418}
 --- !u!1001 &5398825706844624834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,79 +340,4 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
     type: 3}
   m_PrefabInstance: {fileID: 5398825706844624834}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8591797912636977122
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 5644809690275194531}
-    m_Modifications:
-    - target: {fileID: 7351202454370464422, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_Name
-      value: Truck (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3be9600be84525e4f9c738342a8ca643, type: 3}
---- !u!4 &1905961271688169470 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
-    type: 3}
-  m_PrefabInstance: {fileID: 8591797912636977122}
   m_PrefabAsset: {fileID: 0}

@@ -25,9 +25,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Transform: {fileID: 1735847154960748075}
-  ProvideBorders: {fileID: 1404776022647271287}
+  _name: 
+  _transform: {fileID: 1735847154960748075}
+  _provideBorders: {fileID: 1404776022647271287}
 --- !u!1 &5290209149114174652
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,7 +67,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1365565540511565439}
-  - component: {fileID: 6407662652087082510}
+  - component: {fileID: 612529372568997537}
   m_Layer: 0
   m_Name: Road Breakdown Complete
   m_TagString: Untagged
@@ -91,7 +91,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6407662652087082510
+--- !u!114 &612529372568997537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,12 +100,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5383386273555365044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856b548233468f34d97489dae62958e7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea948aa22e1ab124eb9c8e5d01dfb644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParameterObstacles:
+  _parametersObstacle:
   - {fileID: 3929782511933316334}
-  Point: {fileID: 4408728750014397591}
+  _point: {fileID: 0}
 --- !u!1001 &2361338231828084854
 PrefabInstance:
   m_ObjectHideFlags: 0

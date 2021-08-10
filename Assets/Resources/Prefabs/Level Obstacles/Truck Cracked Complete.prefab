@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8479102743499113806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941304019661199262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 
+  _transform: {fileID: 5925076255954647539}
+  _provideBorders: {fileID: 6631991874834539184}
 --- !u!1 &2836730837292278934
 GameObject:
   m_ObjectHideFlags: 0
@@ -39,7 +54,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7879171500860934214}
-  - component: {fileID: 3503493904648930626}
+  - component: {fileID: 876082706930510562}
   m_Layer: 0
   m_Name: Truck Cracked Complete
   m_TagString: Untagged
@@ -63,7 +78,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3503493904648930626
+--- !u!114 &876082706930510562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,27 +87,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8104294291726456626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856b548233468f34d97489dae62958e7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea948aa22e1ab124eb9c8e5d01dfb644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParameterObstacles:
-  - {fileID: 8479102743499113806}
-  Point: {fileID: 1417291851435550752}
---- !u!114 &8479102743499113806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941304019661199262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: 
-  Transform: {fileID: 5925076255954647539}
-  ProvideBorders: {fileID: 6631991874834539184}
+  _parametersObstacle: []
+  _point: {fileID: 4011957948373194129}
 --- !u!1001 &8789675164567597874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,6 +99,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7879171500860934214}
     m_Modifications:
+    - target: {fileID: 1905961271688169470, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.986
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864795768307881468, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
+        type: 3}
+      propertyPath: _transform
+      value: 
+      objectReference: {fileID: 5925076255954647539}
+    - target: {fileID: 2864795768307881468, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
+        type: 3}
+      propertyPath: _provideBorders
+      value: 
+      objectReference: {fileID: 6631991874834539184}
     - target: {fileID: 4980334872187468825, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
         type: 3}
       propertyPath: m_Name

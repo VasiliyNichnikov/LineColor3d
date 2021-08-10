@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2466081376107813907}
-  - component: {fileID: 7731860610108968460}
+  - component: {fileID: 1358962438616622949}
   m_Layer: 0
   m_Name: Truck Solo complete
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7731860610108968460
+--- !u!114 &1358962438616622949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,25 +41,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 625773830767064139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856b548233468f34d97489dae62958e7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea948aa22e1ab124eb9c8e5d01dfb644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParameterObstacles:
+  _parametersObstacle:
   - {fileID: 2592778376898078676}
-  Point: {fileID: 0}
---- !u!65 &4607759889242747177
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672147648844370050}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3661729, y: 1, z: 3.4586706}
-  m_Center: {x: 0.004344523, y: 0, z: 0.15671873}
+  _point: {fileID: 0}
 --- !u!1001 &899671044481917476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129,12 +116,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3be9600be84525e4f9c738342a8ca643, type: 3}
---- !u!1 &7672147648844370050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7351202454370464422, guid: 3be9600be84525e4f9c738342a8ca643,
-    type: 3}
-  m_PrefabInstance: {fileID: 899671044481917476}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7003978197339982392 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7876627538259961884, guid: 3be9600be84525e4f9c738342a8ca643,
@@ -147,7 +128,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 899671044481917476}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7672147648844370050}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}

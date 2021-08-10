@@ -169,6 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1219435701562444724}
   - component: {fileID: 8651912153932454508}
+  - component: {fileID: 4464182538749615229}
   m_Layer: 0
   m_Name: Car Small Green
   m_TagString: Obstacles
@@ -206,8 +207,23 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.98068154, y: 0.8854022, z: 2.508872}
-  m_Center: {x: 0.0046678036, y: 0.44406676, z: -0.0047750473}
+  m_Size: {x: 0.9374657, y: 0.8854022, z: 2.508872}
+  m_Center: {x: 0.0046678483, y: 0.44406676, z: -0.0047750473}
+--- !u!114 &4464182538749615229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219435701562444725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 
+  _transform: {fileID: 1219435701562444724}
+  _provideBorders: {fileID: 1769460968713779994}
 --- !u!1 &1219435702067850610
 GameObject:
   m_ObjectHideFlags: 0

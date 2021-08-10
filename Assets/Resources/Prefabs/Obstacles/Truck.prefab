@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1738347032723313838}
   - component: {fileID: 8720095898849112444}
   - component: {fileID: 1741139708681525335}
-  - component: {fileID: 5500225347051787111}
+  - component: {fileID: 5248501349670616895}
+  - component: {fileID: 2983748091847028737}
   m_Layer: 0
   m_Name: Cube.042
   m_TagString: Untagged
@@ -81,7 +82,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &5500225347051787111
+--- !u!65 &5248501349670616895
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3090685412548170408}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3482995, y: 1.5766493, z: 3.4651887}
+  m_Center: {x: 0.0056921244, y: 0.7869101, z: 0.16150272}
+--- !u!114 &2983748091847028737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,9 +155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Transform: {fileID: 7876627538259961884}
-  ProvideBorders: {fileID: 5500225347051787111}
+  _name: 
+  _transform: {fileID: 7876627538259961884}
+  _provideBorders: {fileID: 2983748091847028737}
 --- !u!1 &7787325602988274827
 GameObject:
   m_ObjectHideFlags: 0

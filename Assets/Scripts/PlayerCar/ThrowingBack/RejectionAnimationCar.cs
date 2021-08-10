@@ -3,7 +3,7 @@
 public class RejectionAnimationCar : MonoBehaviour
 {
     [SerializeField] private DragHandler _drag;
-    [SerializeField, Range(0, 5)] private float _stepZ;
+    [SerializeField, Range(0, 15)] private float _stepZ;
     private Transform _thisTransform;
     private const float _timeAnimation = 0.5f;
 

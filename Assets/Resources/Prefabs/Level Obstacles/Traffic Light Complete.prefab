@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: 
-  Transform: {fileID: 3239544431142726353}
-  ProvideBorders: {fileID: 4207945800378477102}
+  _name: 
+  _transform: {fileID: 3239544431142726353}
+  _provideBorders: {fileID: 4207945800378477102}
 --- !u!114 &4207945800378477102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,6 +28,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedPointId: 0
+--- !u!1 &3870945994893346427
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2167820572276250507}
+  m_Layer: 0
+  m_Name: Behind Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2167820572276250507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3870945994893346427}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.69375485, z: -0.22172928}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5199445197341925085}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5477783320722649040
 GameObject:
   m_ObjectHideFlags: 0
@@ -37,7 +67,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5199445197341925085}
-  - component: {fileID: 1960558554241905671}
+  - component: {fileID: 126318167489725879}
   m_Layer: 0
   m_Name: Traffic Light Complete
   m_TagString: Untagged
@@ -57,11 +87,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3239544431142726353}
-  - {fileID: 4281511327434444807}
+  - {fileID: 2167820572276250507}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1960558554241905671
+--- !u!114 &126318167489725879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,42 +100,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5477783320722649040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 856b548233468f34d97489dae62958e7, type: 3}
+  m_Script: {fileID: 11500000, guid: ea948aa22e1ab124eb9c8e5d01dfb644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParameterObstacles:
+  _parametersObstacle:
   - {fileID: 1427353531853919531}
-  Point: {fileID: 4281511327434444807}
---- !u!1 &5611133642770964684
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4281511327434444807}
-  m_Layer: 0
-  m_Name: Behind Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4281511327434444807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5611133642770964684}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.69375485, z: -0.22172984}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5199445197341925085}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _point: {fileID: 2167820572276250507}
 --- !u!1001 &3100693210930174218
 PrefabInstance:
   m_ObjectHideFlags: 0
