@@ -13,12 +13,12 @@ public class UpdateSizeBoxColliderAxesX : MonoBehaviour
     
     private void OnEnable()
     {
-        EventManagerPlayerCar.EventUpdateSizeBoxCollider += UpdateSizeCollider;
+        EventManagerPlayerCar.EventUpdateSizeBoxColliderAndShadow += UpdateSizeCollider;
     }
 
     private void OnDisable()
     {
-        EventManagerPlayerCar.EventUpdateSizeBoxCollider -= UpdateSizeCollider;
+        EventManagerPlayerCar.EventUpdateSizeBoxColliderAndShadow -= UpdateSizeCollider;
     }
 
     private void Start()

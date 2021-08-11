@@ -31,7 +31,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     
     private static void UpdateSizeBoxColliderAndProjector()
     {
-        EventManagerPlayerCar.CallUpdateSizeBoxCollider();
+        EventManagerPlayerCar.CallUpdateSizeBoxColliderAndShadow();
         EventManagerPlayerCar.CallUpdateSizeProjector();
     }
     
