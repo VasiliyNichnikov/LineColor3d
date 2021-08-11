@@ -18,14 +18,11 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (GameOver.IsCrashed) return;
         _detectionClick.MousePositionDown = eventData.position;
     }
     
     public void OnDrag(PointerEventData eventData)
     {
-        if (GameOver.IsCrashed) return;
-        
         _detectionClick.MousePositionDrag = eventData.position;
         Vector2 direction = _detectionClick.GetDirection();
         _timeAnimation.ChangingValuesTimeXAndTimeY(direction);
@@ -34,8 +31,6 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IDragHandler, IPo
     
     private static void UpdateSizeBoxColliderAndProjector()
     {
-        if (GameOver.IsCrashed) return;
-        
         EventManagerPlayerCar.CallUpdateSizeBoxCollider();
         EventManagerPlayerCar.CallUpdateSizeProjector();
     }

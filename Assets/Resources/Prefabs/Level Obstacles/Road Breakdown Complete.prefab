@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parametersObstacle:
   - {fileID: 3929782511933316334}
-  _point: {fileID: 0}
+  _point: {fileID: 4408728750014397591}
 --- !u!1001 &2361338231828084854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118,10 +118,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road Breakdown
       objectReference: {fileID: 0}
+    - target: {fileID: 3717739061559422183, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
     - target: {fileID: 4094862047633192541, guid: 3ad13b9db12c7304880153fc23aa475c,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094862047633192541, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 174.92
       objectReference: {fileID: 0}
     - target: {fileID: 4094862047633192541, guid: 3ad13b9db12c7304880153fc23aa475c,
         type: 3}
@@ -172,6 +182,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212131450634775182, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.0076453374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212131450634775182, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.0024901694
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212131450634775182, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.00007017732
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212131450634775182, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.0006008842
+      objectReference: {fileID: 0}
+    - target: {fileID: 4212131450634775182, guid: 3ad13b9db12c7304880153fc23aa475c,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad13b9db12c7304880153fc23aa475c, type: 3}

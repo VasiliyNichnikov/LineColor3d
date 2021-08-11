@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parametersObstacle:
   - {fileID: 5543255942307003610}
-  _point: {fileID: 0}
+  _point: {fileID: 4460609496009008322}
 --- !u!1 &1693012459301142002
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +192,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -0.008731723
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651912153932454508, guid: bf80f083d87a92c4a8f5efc7fd4967de,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf80f083d87a92c4a8f5efc7fd4967de, type: 3}

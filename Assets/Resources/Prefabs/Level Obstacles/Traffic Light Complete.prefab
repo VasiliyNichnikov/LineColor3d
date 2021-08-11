@@ -14,8 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 
   _transform: {fileID: 3239544431142726353}
-  _provideBorders: {fileID: 4207945800378477102}
---- !u!114 &4207945800378477102
+  _provideBorders: {fileID: 1179112738295336572}
+--- !u!65 &7592447068950801388
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864004398754508907}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2237062, y: 0.19447279, z: 0.14169568}
+  m_Center: {x: -0.18230963, y: 1.2901943, z: -0.003829997}
+--- !u!114 &1179112738295336572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,6 +185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Traffic Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 916795745466476897, guid: 444893d917cb9de4aa4cbef5c561a2c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 444893d917cb9de4aa4cbef5c561a2c7, type: 3}

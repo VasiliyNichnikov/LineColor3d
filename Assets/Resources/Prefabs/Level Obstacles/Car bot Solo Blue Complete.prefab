@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 9216566356313332913}
   m_Layer: 0
   m_Name: Car bot Solo Blue Complete
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982545344558317412, guid: bafd8fdb2c4eedc4eb6d7ef8c839a59e,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558545352292250229, guid: bafd8fdb2c4eedc4eb6d7ef8c839a59e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
       objectReference: {fileID: 0}
     - target: {fileID: 7558893020695281280, guid: bafd8fdb2c4eedc4eb6d7ef8c839a59e,
         type: 3}

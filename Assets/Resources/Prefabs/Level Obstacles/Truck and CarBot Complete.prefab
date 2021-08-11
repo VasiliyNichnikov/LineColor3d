@@ -173,6 +173,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6982545344558317412, guid: fdd064db6b427e64e809bd968a51af9b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558545352292250229, guid: fdd064db6b427e64e809bd968a51af9b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
     - target: {fileID: 7558893020695281280, guid: fdd064db6b427e64e809bd968a51af9b,
         type: 3}
       propertyPath: m_Name
@@ -205,6 +215,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4178664742507144994}
     m_Modifications:
+    - target: {fileID: 3090685412548170408, guid: 3be9600be84525e4f9c738342a8ca643,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248501349670616895, guid: 3be9600be84525e4f9c738342a8ca643,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7351202454370464422, guid: 3be9600be84525e4f9c738342a8ca643,
         type: 3}
       propertyPath: m_Name

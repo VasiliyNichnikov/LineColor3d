@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parametersObstacle:
   - {fileID: 3599560016012256004}
-  _point: {fileID: 0}
+  _point: {fileID: 579642842240912682}
 --- !u!114 &215223956272583456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: 
-  _transform: {fileID: 0}
-  _provideBorders: {fileID: 0}
+  _transform: {fileID: 8616163186263530104}
+  _provideBorders: {fileID: 3970894944688199413}
 --- !u!1001 &1907988418653644695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,6 +110,16 @@ PrefabInstance:
       propertyPath: _provideBorders
       value: 
       objectReference: {fileID: 3970894944688199413}
+    - target: {fileID: 3381587211748168651, guid: 014edf1b20b787c46a530ded312a7d40,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539411656937635420, guid: 014edf1b20b787c46a530ded312a7d40,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7395925658562570069, guid: 014edf1b20b787c46a530ded312a7d40,
         type: 3}
       propertyPath: m_Name

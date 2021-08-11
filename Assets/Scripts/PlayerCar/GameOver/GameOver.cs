@@ -1,17 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] private RejectionAnimationCar _rejectionAnimation;
-    private static bool _isCrashed;
-    public static bool IsCrashed => _isCrashed;
-
-    public static void OffCrashed()
-    {
-        _isCrashed = false;
-    }
-
+    [SerializeField] private MovementCar movementCar;
+    
     private void OnEnable()
     {
         EventManagerPlayerCar.EventGameOver += HitObstacle;
@@ -24,9 +16,7 @@ public class GameOver : MonoBehaviour
 
     private void HitObstacle()
     {
-        _isCrashed = true;
-        _rejectionAnimation.ResettingHeightAndWidthAnimation();
-        _rejectionAnimation.DepartureBack();
+        movementCar.SetState(new ResetSpeedToMinSpeedState());
     }
     
 }

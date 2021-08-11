@@ -221,6 +221,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car Small Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 8651912153932454508, guid: 0a54946fb5692de4e9dc779e63cc24b7,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a54946fb5692de4e9dc779e63cc24b7, type: 3}
 --- !u!1 &239479106625201191 stripped
@@ -313,6 +318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Car Small Light Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651912153932454508, guid: bf80f083d87a92c4a8f5efc7fd4967de,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf80f083d87a92c4a8f5efc7fd4967de, type: 3}

@@ -14,15 +14,15 @@ public class RejectionAnimationCar : MonoBehaviour
 
     public void ResettingHeightAndWidthAnimation()
     {
-        CalculatorTimeAnimation calculatorTime = _drag.TimeAnimation;
-        DetectionClick detectionClick = _drag.DetectionClick;
-        
-        Vector2 direction = new Vector2(calculatorTime.SaveTimeX - _timeAnimation,
-            _timeAnimation - calculatorTime.SaveTimeY);
-        calculatorTime.ChangingValuesTimeXAndTimeY(direction);
-        detectionClick.ResetingMousePositionDownAndMousePositionDrag();
-        calculatorTime.ResetingSaveTimeXAndSaveTimeY();
-        GameOver.OffCrashed();
+        // CalculatorTimeAnimation calculatorTime = _drag.TimeAnimation;
+        // DetectionClick detectionClick = _drag.DetectionClick;
+        //
+        // Vector2 direction = new Vector2(calculatorTime.SaveTimeX - _timeAnimation,
+        //     _timeAnimation - calculatorTime.SaveTimeY);
+        // calculatorTime.ChangingValuesTimeXAndTimeY(direction);
+        // detectionClick.ResetingMousePositionDownAndMousePositionDrag();
+        // calculatorTime.ResetingSaveTimeXAndSaveTimeY();
+        // GameOver.OffCrashed();
     }
 
     public void DepartureBack()

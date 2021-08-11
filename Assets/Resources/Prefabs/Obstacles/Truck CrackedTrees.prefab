@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7461170878345320893}
   m_Layer: 0
   m_Name: Cube.024
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,11 +89,41 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3383467157802342056}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.1057153, y: 0.27018404, z: 0.37528396}
   m_Center: {x: 1.5975797, y: 1.249254, z: -0.050912857}
+--- !u!1 &4246858033147394860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4313727243559732284}
+  m_Layer: 0
+  m_Name: Behind Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4313727243559732284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246858033147394860}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.002, y: 1.23, z: -0.17973438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5644809690275194531}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4980334872187468825
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +155,7 @@ Transform:
   - {fileID: 2856157803476942814}
   - {fileID: 544409971279451310}
   - {fileID: 3152849078532491969}
+  - {fileID: 4313727243559732284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -142,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parametersObstacle:
   - {fileID: 2585593076397726771}
-  _point: {fileID: 0}
+  _point: {fileID: 4313727243559732284}
 --- !u!1 &7137034732292695212
 GameObject:
   m_ObjectHideFlags: 0

@@ -75,6 +75,7 @@ Transform:
   m_Children:
   - {fileID: 4011957948373194129}
   - {fileID: 1417291851435550752}
+  - {fileID: 8472524151792431935}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90,8 +91,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea948aa22e1ab124eb9c8e5d01dfb644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parametersObstacle: []
-  _point: {fileID: 4011957948373194129}
+  _parametersObstacle:
+  - {fileID: 6492763265309519617}
+  _point: {fileID: 8472524151792431935}
+--- !u!1 &8138733290954220309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8472524151792431935}
+  m_Layer: 0
+  m_Name: Behind Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8472524151792431935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138733290954220309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.00999999, y: 2.46, z: -0.35946655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7879171500860934214}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &8789675164567597874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +146,11 @@ PrefabInstance:
       propertyPath: _provideBorders
       value: 
       objectReference: {fileID: 6631991874834539184}
+    - target: {fileID: 3383467157802342056, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
     - target: {fileID: 4980334872187468825, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
         type: 3}
       propertyPath: m_Name
@@ -179,6 +216,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fake center
       objectReference: {fileID: 0}
+    - target: {fileID: 7461170878345320893, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7308035280863679026, guid: 2b1650b7366fefe4bb4641197e7f6aa6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2b1650b7366fefe4bb4641197e7f6aa6, type: 3}
@@ -210,5 +252,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9576d8cf33605ac49b7678b000ae0589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6492763265309519617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2585593076397726771, guid: 2b1650b7366fefe4bb4641197e7f6aa6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8789675164567597874}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941304019661199262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

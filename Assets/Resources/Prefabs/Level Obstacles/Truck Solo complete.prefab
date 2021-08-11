@@ -29,6 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7003978197339982392}
+  - {fileID: 2536784089292543930}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -46,7 +47,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parametersObstacle:
   - {fileID: 2592778376898078676}
-  _point: {fileID: 0}
+  _point: {fileID: 2536784089292543930}
+--- !u!1 &1409395984600373522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2536784089292543930}
+  m_Layer: 0
+  m_Name: Behind Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2536784089292543930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409395984600373522}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7869102, z: -1.5710917}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2466081376107813907}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &899671044481917476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,6 +85,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2466081376107813907}
     m_Modifications:
+    - target: {fileID: 3090685412548170408, guid: 3be9600be84525e4f9c738342a8ca643,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3424741492388677104, guid: 3be9600be84525e4f9c738342a8ca643,
+        type: 3}
+      propertyPath: _name
+      value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248501349670616895, guid: 3be9600be84525e4f9c738342a8ca643,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7351202454370464422, guid: 3be9600be84525e4f9c738342a8ca643,
         type: 3}
       propertyPath: m_Name

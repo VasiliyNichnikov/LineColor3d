@@ -5,7 +5,7 @@ public class AnimationCar
     private readonly Animator _animator;
     private readonly AnimationClip _clip;
     private readonly int _layer;
-
+    
     public AnimationCar(Animator animator, AnimationClip clip, int layer)
     {
         _animator = animator;

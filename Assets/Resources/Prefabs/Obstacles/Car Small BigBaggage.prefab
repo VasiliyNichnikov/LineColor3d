@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1782444511320569223}
   - component: {fileID: 4564526449445011789}
   - component: {fileID: 6789408629786359805}
+  - component: {fileID: 3354483151547451023}
+  - component: {fileID: 30858283722614902}
   m_Layer: 0
   m_Name: Car Small BigBaggage
   m_TagString: Obstacles
@@ -96,6 +98,34 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.7246585, y: 0.11881328, z: 0.26000202}
   m_Center: {x: 0.028411865, y: 1.5059422, z: 0.84280103}
+--- !u!114 &3354483151547451023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618993743489147032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2b90e411cc5a3409fe0b0f32f5021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 
+  _transform: {fileID: 3392151991795087906}
+  _provideBorders: {fileID: 0}
+--- !u!114 &30858283722614902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2618993743489147032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9576d8cf33605ac49b7678b000ae0589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedPointId: 0
 --- !u!114 &286830551546186703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,8 +368,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: [{fileID: 4464182538749615229, guid: bf80f083d87a92c4a8f5efc7fd4967de,
-        type: 3}]
+    m_RemovedComponents:
+    - {fileID: 4464182538749615229, guid: bf80f083d87a92c4a8f5efc7fd4967de, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bf80f083d87a92c4a8f5efc7fd4967de, type: 3}
 --- !u!1 &7523293323637435397 stripped
 GameObject:
