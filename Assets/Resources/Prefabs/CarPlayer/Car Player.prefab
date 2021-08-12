@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 7034406832523306184}
   - component: {fileID: 3600449374624492871}
   m_Layer: 0
-  m_Name: CarPlayer
+  m_Name: Car Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 3772193553578630246}
   - component: {fileID: 6322592438728709754}
   m_Layer: 0
-  m_Name: Forward Point
+  m_Name: Point Checking Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1329,7 +1329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7540144471330398916}
   m_Layer: 0
-  m_Name: Behind Point
+  m_Name: Behind Point Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
