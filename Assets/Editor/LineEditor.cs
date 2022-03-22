@@ -1,44 +1,47 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(Line))]
-public class LineEditor : Editor
+namespace Editor
 {
-    private Line _line;
-    
-    private void OnSceneGUI()
+    [CustomEditor(typeof(Line))]
+    public class LineEditor : UnityEditor.Editor
     {
-        _line = (Line) target;
-
-        Transform handleTransform = _line.transform;
-        Quaternion handleRotation =
-            Tools.pivotRotation == PivotRotation.Local ? handleTransform.rotation : Quaternion.identity;
-        
-        Vector3 p0 = handleTransform.TransformPoint(_line.p0);
-        Vector3 p1 = handleTransform.TransformPoint(_line.p1);
-        
-        Handles.color = Color.black;
-        Handles.DrawLine(p0, p1);
-
-        Handles.DoPositionHandle(p0, handleRotation);
-        Handles.DoPositionHandle(p1, handleRotation);
-        
-        EditorGUI.BeginChangeCheck();
-        p0 = Handles.DoPositionHandle(p0, handleRotation);
-        if (EditorGUI.EndChangeCheck())
+        private Line _line;
+    
+        private void OnSceneGUI()
         {
-            Undo.RecordObject(_line, "Move point");
-            EditorUtility.SetDirty(_line);
-            _line.p0 = handleTransform.InverseTransformPoint(p0);
-        }
+            _line = (Line) target;
+
+            Transform handleTransform = _line.transform;
+            Quaternion handleRotation =
+                Tools.pivotRotation == PivotRotation.Local ? handleTransform.rotation : Quaternion.identity;
         
-        EditorGUI.BeginChangeCheck();
-        p1 = Handles.DoPositionHandle(p1, handleRotation);
-        if (EditorGUI.EndChangeCheck())
-        {
-            Undo.RecordObject(_line, "Move point");
-            EditorUtility.SetDirty(_line);
-            _line.p1 = handleTransform.InverseTransformPoint(p1);
+            Vector3 p0 = handleTransform.TransformPoint(_line.p0);
+            Vector3 p1 = handleTransform.TransformPoint(_line.p1);
+        
+            Handles.color = Color.black;
+            Handles.DrawLine(p0, p1);
+
+            Handles.DoPositionHandle(p0, handleRotation);
+            Handles.DoPositionHandle(p1, handleRotation);
+        
+            EditorGUI.BeginChangeCheck();
+            p0 = Handles.DoPositionHandle(p0, handleRotation);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(_line, "Move point");
+                EditorUtility.SetDirty(_line);
+                _line.p0 = handleTransform.InverseTransformPoint(p0);
+            }
+        
+            EditorGUI.BeginChangeCheck();
+            p1 = Handles.DoPositionHandle(p1, handleRotation);
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(_line, "Move point");
+                EditorUtility.SetDirty(_line);
+                _line.p1 = handleTransform.InverseTransformPoint(p1);
+            }
         }
     }
 }
